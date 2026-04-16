@@ -1,0 +1,78 @@
+body {
+    background-image: url(../assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+.header {
+    background: #ff6b81;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* CARD */
+.card-custom {
+    background: white;
+    border-radius: 15px;
+    padding: 35px;
+    margin: 10px;
+}
+
+.title {
+    color: #fa4f69;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#tong{
+    color: #fa4f69;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.small-text {
+    color: gray;
+    font-size: 14px;
+}
+
+.product-img {
+    width: 70px;
+    border-radius: 10px;
+}
+
+/* BOTTOM BAR */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+    font-size: 25px;
+}
+
+.btn-main {
+    background: #ff6b81;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* MODAL BOTTOM */
+.modal-dialog-bottom {
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.modal-content {
+    border-radius: 15px 15px 0 0;
+}

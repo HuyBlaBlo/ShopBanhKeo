@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="../bsicon/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+
+<div class="register-container">
+    <h2 class="title">Đăng ký tài khoản</h2>
+    <form action="">
+        <div class="mb-3">
+            <label class="form-label">Tên đăng nhập</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Mật khẩu</label>
+            <input type="password" class="form-control">
+        </div>
+
+        <div class="mb-5">
+            <label class="form-label">Xác nhận mật khẩu</label>
+            <input type="password" class="form-control">
+        </div>
+    </form>
+
+    <h4 class="title">THÔNG TIN CÁ NHÂN</h4>
+    <form>
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Họ</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col">
+                <label class="form-label">Tên</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ngày sinh</label>
+            <input type="date" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label d-block">Giới tính</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender">
+                <label class="form-check-label">Nam</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender">
+                <label class="form-check-label">Nữ</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Địa chỉ</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Số điện thoại</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control">
+        </div>
+
+        <button class="btn btn-pink w-100">Đăng ký</button>
+    </form>
+
+    <div class="register-divider">hoặc</div>
+
+    <div class="d-grid gap-2">
+        <button class="btn btn-danger social-btn w-75 mx-auto">
+            <i class="bi bi-google"></i> Đăng nhập Google
+        </button>
+
+        <button class="btn btn-primary social-btn w-75 mx-auto">
+            <i class="bi bi-facebook"></i> Đăng nhập Facebook
+        </button>
+    </div>
+
+    <div class="extra-link">
+        Bạn đã có tài khoản?
+        <a href="login.html">Đăng nhập ngay</a>
+    </div>
+</div>
+
+</body>
+</html>

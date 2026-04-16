@@ -1,0 +1,79 @@
+body {
+    background-image: url(../assets/img/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.register-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: #ff6fa5;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-pink {
+    background-color: #ff6b81;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.btn-pink:hover {
+    background-color: #ff4f8b;
+}
+
+.social-btn {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.register-divider {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    color: #999;
+}
+
+.register-divider::before,
+.register-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+    margin: 0 10px;
+}
+
+.extra-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.extra-link a {
+    color: #ff6fa5;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.extra-link a:hover {
+    text-decoration: underline;
+}
