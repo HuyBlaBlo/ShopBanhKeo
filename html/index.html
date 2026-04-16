@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cửa Hàng Hoa Tươi Spark</title>
+    <title>Thế Giới Đồ Ngọt Sweet Cravings</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
     <script src="../js/bootstrap.bundle.min.js"></script>
@@ -19,7 +19,7 @@
             <img
               src="../assets/img/logo.jpg"
               alt="Logo"
-              class="img-fluid"
+              class="img-fluid rounded-circle"
               width="100"
             />
           </div>
@@ -37,39 +37,33 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
                 <li class="nav-item">
-                  <a class="nav-link px-3" href="../html/index.html"
-                    >Trang chủ</a
-                  >
+                  <a class="nav-link px-3" href="index.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link px-3" href="../html/about.html"
-                    >Về chúng tôi</a
-                  >
+                  <a class="nav-link px-3" href="about.html">Về chúng tôi</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle px-3"
                     href="#"
                     data-bs-toggle="dropdown"
-                    >Chủ đề</a
+                    >Sản phẩm</a
                   >
                   <ul class="dropdown-menu shadow-sm border-0">
                     <li>
-                      <a class="dropdown-item" href="chude.html"
-                        >Hoa sinh nhật</a
+                      <a class="dropdown-item" href="products.html"
+                        >Socola các loại</a
+                      >
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Bánh ngọt & Capcake</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="chude.html">Hoa cầu hôn</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="chude.html"
-                        >Hoa tốt nghiệp</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="chude.html"
-                        >Hoa khai trương</a
+                      <a class="dropdown-item" href="products.html"
+                        >Kẹo dẻo & Marshmallow</a
                       >
                     </li>
                   </ul>
@@ -79,42 +73,29 @@
                     class="nav-link dropdown-toggle px-3"
                     href="#"
                     data-bs-toggle="dropdown"
-                    >Kiểu dáng</a
+                    >Quà tặng</a
                   >
                   <ul class="dropdown-menu shadow-sm border-0">
                     <li>
-                      <a class="dropdown-item" href="kieudang.html">Bó hoa</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="kieudang.html">Giỏ hoa</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle px-3"
-                    href="#"
-                    data-bs-toggle="dropdown"
-                    >Hoa tươi</a
-                  >
-                  <ul class="dropdown-menu shadow-sm border-0">
-                    <li>
-                      <a class="dropdown-item" href="hoatuoi.html">Hoa hồng</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="hoatuoi.html"
-                        >Hoa hướng dương</a
+                      <a class="dropdown-item" href="products.html"
+                        >Hộp quà Socola</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="hoatuoi.html">Hoa baby</a>
+                      <a class="dropdown-item" href="products.html"
+                        >Giỏ quà Bánh kẹo</a
+                      >
                     </li>
                   </ul>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link px-3 text-danger" href="index.html"
                     >Đang giảm giá</a
                   >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="news.html">Thông báo mới</a>
                 </li>
               </ul>
             </div>
@@ -127,7 +108,7 @@
                   id="search-inp"
                   type="text"
                   class="form-control form-control-sm"
-                  placeholder="Tìm kiếm..."
+                  placeholder="Tìm bánh, kẹo, socola..."
                 />
                 <button class="btn btn-danger btn-sm" type="submit">
                   <svg
@@ -201,6 +182,9 @@
         </div>
       </header>
 
+      <!-- ANH EM VIẾT PHẦN CỦA MÌNH TỪ ĐAY XUỐNG NHA BỎ ĐOẠN CODE BÊN DƯỚI ĐI-->
+      <!-- CÁC TRANG CÓ LIÊN QUAN ĐẾN TRANG INDEX THÌ VIẾT TỪ ĐÂY XUỐNG  -->
+
       <section class="container mt-3">
         <img
           src="../assets/img/banner.jpg"
@@ -266,20 +250,26 @@
         <div id="products-container" class="row g-4"></div>
       </section>
 
+      <!-- PHẦN FOOTER NÀY NHỮNG TRANG NÀO LẤY GIAO DIỆN TỪ INDEX THÌ ĐỀU PHAỈ GIỮ LẠI -->
       <footer
         class="mt-5 pt-5 pb-3 bg-light"
-        style="border-top: solid 5px #8b0a20"
+        style="border-top: solid 5px #d81b60"
       >
         <div class="container px-4">
           <div class="row align-items-center mb-4">
             <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-              <img src="../assets/img/logo.jpg" width="140" alt="Spark Logo" />
+              <img
+                src="../assets/img/logo.jpg"
+                width="140"
+                alt="Sweet Cravings Logo"
+                class="rounded-circle"
+              />
             </div>
             <div class="col-md-8">
               <div
                 class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-end gap-3"
               >
-                <h5 class="m-0 fw-bold" style="color: #8b0a20">
+                <h5 class="m-0 fw-bold" style="color: #d81b60">
                   ĐĂNG KÝ NHẬN TIN
                 </h5>
                 <div class="input-group" style="max-width: 350px">
@@ -298,229 +288,93 @@
 
           <div class="row pt-3">
             <div class="col-md-3 mb-4">
-              <h6 class="fw-bold mb-3" style="color: #8b0a20">VỀ CHÚNG TÔI</h6>
+              <h6 class="fw-bold mb-3" style="color: #d81b60">VỀ CHÚNG TÔI</h6>
               <p class="small text-muted">
-                Spark là thương hiệu được thành lập vào năm 2022 với tiêu chí
-                đặt chất lượng sản phẩm lên hàng đầu.
+                Đây là sốp bánh kẹo trá hình có đầu tư lớn
               </p>
             </div>
 
             <div class="col-md-3 mb-4">
-              <h6 class="fw-bold mb-3" style="color: #8b0a20">LIÊN KẾT</h6>
+              <h6 class="fw-bold mb-3" style="color: #d81b60">
+                LIÊN KẾT NHANH
+              </h6>
               <ul class="list-unstyled small custom-link-list">
                 <li class="mb-2">
-                  <a href="index.html" class="text-decoration-none text-muted"
+                  <a href="about.html" class="text-decoration-none text-muted"
                     >Về chúng tôi</a
                   >
                 </li>
                 <li class="mb-2">
-                  <a href="index.html" class="text-decoration-none text-muted"
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
                     >Sản phẩm</a
                   >
                 </li>
                 <li class="mb-2">
-                  <a href="index.html" class="text-decoration-none text-muted"
-                    >Điều khoản</a
+                  <a
+                    href="info-customer.html"
+                    class="text-decoration-none text-muted"
+                    >Chăm sóc khách hàng</a
                   >
                 </li>
                 <li class="mb-2">
-                  <a href="index.html" class="text-decoration-none text-muted"
-                    >Liên hệ</a
+                  <a href="sidemap.html" class="text-decoration-none text-muted"
+                    >Sơ đồ Website (Sitemap)</a
                   >
                 </li>
               </ul>
             </div>
 
             <div class="col-md-3 mb-4">
-              <h6 class="fw-bold mb-3" style="color: #8b0a20">
-                CHI TIẾT SẢN PHẨM
-              </h6>
+              <h6 class="fw-bold mb-3" style="color: #d81b60">DANH MỤC</h6>
               <ul class="list-unstyled small custom-link-list">
                 <li class="mb-2">
-                  <a href="chude.html" class="text-decoration-none text-muted"
-                    >Chủ đề</a
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                    >Socola Nghệ Thuật</a
                   >
                 </li>
                 <li class="mb-2">
                   <a
-                    href="kieudang.html"
+                    href="products.html"
                     class="text-decoration-none text-muted"
-                    >Kiểu dáng</a
+                    >Bánh Ngọt & Cupcake</a
                   >
                 </li>
                 <li class="mb-2">
-                  <a href="hoatuoi.html" class="text-decoration-none text-muted"
-                    >Hoa tươi</a
+                  <a href="news.html" class="text-decoration-none text-muted"
+                    >Tin tức & Blog</a
                   >
                 </li>
                 <li class="mb-2">
-                  <a href="index.html" class="text-decoration-none text-danger"
-                    >Đang giảm giá</a
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-danger fw-bold"
+                    >Flash Sale Đồ Ngọt</a
                   >
                 </li>
               </ul>
             </div>
 
             <div class="col-md-3 mb-4 small text-muted">
-              <h6 class="fw-bold mb-3" style="color: #8b0a20">LIÊN HỆ</h6>
-              <p class="mb-2">📍 273 An Dương Vương, Q5, TP.HCM</p>
-              <p class="mb-2">📞 0123 456 789 – 0987 654 321</p>
-              <p class="mb-2">✉️ abc@domain.com</p>
+              <h6 class="fw-bold mb-3" style="color: #d81b60">LIÊN HỆ</h6>
+              <p class="mb-2">
+                📍 số 12 Nguyễn Văn Bảo,Phường Hạnh Thông, quận Gò Vấp, TP.HCM
+              </p>
+              <p class="mb-2">📞 0123 456 JQK – 0987 654 KQJ</p>
+              <p class="mb-2">✉️ jqk.iuh.edu.vn</p>
             </div>
           </div>
 
           <hr />
 
           <div class="text-center small text-muted pt-2">
-            <p class="mb-0">Copyright © 2022 Spark. All Rights Reserved.</p>
+            <p class="mb-0">Copyright © 2026 Spark. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
-    </div>
-
-    <div class="modal fade" id="cartModal" tabindex="-1">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" style="color: #8b0a20">
-              Giỏ hàng của bạn
-            </h5>
-            <button class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-            <div class="table-responsive">
-              <table class="table align-middle">
-                <thead class="table-light">
-                  <tr>
-                    <th>SP</th>
-                    <th>Tên</th>
-                    <th>Giá</th>
-                    <th>SL</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody id="cart-items"></tbody>
-              </table>
-            </div>
-            <h5 class="text-end mt-3 fw-bold">
-              Tổng: <span id="cart-total" class="text-danger">0</span> VNĐ
-            </h5>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Đóng
-            </button>
-            <button
-              class="btn btn-danger"
-              id="checkoutBtn"
-              data-bs-toggle="modal"
-              data-bs-target="#checkoutModal"
-            >
-              Tiến hành đặt hàng
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="checkoutModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" style="color: #8b0a20">
-              Thông tin giao hàng
-            </h5>
-            <button class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-            <label class="fw-medium mb-1 small">Tên khách hàng</label>
-            <input
-              type="text"
-              class="form-control mb-3"
-              id="cusName"
-              required
-            />
-
-            <label class="fw-medium mb-1 small">Số điện thoại</label>
-            <input
-              type="tel"
-              class="form-control mb-3"
-              id="cusPhone"
-              required
-            />
-
-            <label class="fw-medium mb-1 small">Địa chỉ giao hàng</label>
-            <input
-              type="text"
-              class="form-control mb-3"
-              id="cusAddress"
-              required
-            />
-
-            <label class="fw-medium mb-1 small">Phương thức thanh toán</label>
-            <select class="form-select mb-2" id="paymentMethod">
-              <option value="COD">Thanh toán khi nhận hàng (COD)</option>
-              <option value="Bank">Chuyển khoản ngân hàng</option>
-              <option value="Momo">Ví Momo</option>
-            </select>
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-secondary"
-              data-bs-toggle="modal"
-              data-bs-target="#cartModal"
-            >
-              Quay lại
-            </button>
-            <button
-              type="button"
-              class="btn btn-success"
-              id="confirmOrderBtn"
-              data-bs-toggle="modal"
-              data-bs-target="#doneModal"
-            >
-              Xác nhận
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="doneModal" tabindex="-1">
-      <div class="modal-dialog modal-sm modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
-          <div class="modal-body text-center p-4">
-            <h1 class="text-success mb-3">✔️</h1>
-            <h5 class="fw-bold">Đặt hàng thành công!</h5>
-            <p class="text-muted small">Cảm ơn bạn đã tin tưởng Spark.</p>
-            <button class="btn btn-danger w-100 mt-2" data-bs-dismiss="modal">
-              Tiếp tục mua sắm
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="toast-container position-fixed bottom-0 end-0 p-3"
-      style="z-index: 1100"
-    >
-      <div
-        id="toastAddCart"
-        class="toast align-items-center text-bg-success border-0"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="d-flex">
-          <div class="toast-body fw-medium">✔️ Đã thêm vào giỏ hàng!</div>
-          <button
-            type="button"
-            class="btn-close btn-close-white me-2 m-auto"
-            data-bs-dismiss="toast"
-          ></button>
-        </div>
-      </div>
     </div>
   </body>
 </html>
