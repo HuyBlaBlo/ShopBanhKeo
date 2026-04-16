@@ -1,9 +1,526 @@
 <!doctype html>
-<html lang="en">
+<html lang="vn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cửa Hàng Hoa Tươi Spark</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
   </head>
-  <body></body>
+
+  <body class="bg-light">
+    <div class="container shadow-sm bg-white p-0">
+      <header class="py-3 border-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3 flex-wrap"
+        >
+          <div class="logo">
+            <img
+              src="../assets/img/logo.jpg"
+              alt="Logo"
+              class="img-fluid"
+              width="100"
+            />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="../html/index.html"
+                    >Trang chủ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="../html/about.html"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Chủ đề</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="chude.html"
+                        >Hoa sinh nhật</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="chude.html">Hoa cầu hôn</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="chude.html"
+                        >Hoa tốt nghiệp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="chude.html"
+                        >Hoa khai trương</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Kiểu dáng</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="kieudang.html">Bó hoa</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="kieudang.html">Giỏ hoa</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Hoa tươi</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="hoatuoi.html">Hoa hồng</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="hoatuoi.html"
+                        >Hoa hướng dương</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="hoatuoi.html">Hoa baby</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3 text-danger" href="index.html"
+                    >Đang giảm giá</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <form id="searchForm" class="d-none d-md-block">
+              <div class="input-group">
+                <input
+                  id="search-inp"
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tìm kiếm..."
+                />
+                <button class="btn btn-danger btn-sm" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <div class="dropdown">
+              <a
+                class="text-danger dropdown-toggle text-decoration-none"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.832 1.664C2.154 12.333 2.001 13.078 2 13.324z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                <li>
+                  <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              class="text-danger position-relative text-decoration-none"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.65rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="container mt-3">
+        <img
+          src="../assets/img/banner.jpg"
+          class="img-fluid rounded-3 w-100 object-fit-cover"
+          style="max-height: 400px"
+          alt="Banner hoa"
+        />
+      </section>
+
+      <div class="container my-5">
+        <div class="row g-3">
+          <div class="col-md-3 col-6">
+            <div
+              class="feature-box p-3 border rounded-3 bg-light d-flex flex-column align-items-center text-center h-100"
+            >
+              <span class="fs-4 mb-2">🚚</span>
+              <p class="fw-bold mb-1" style="color: #8b0a20; font-size: 14px">
+                GIAO HÀNG NHANH
+              </p>
+              <p class="text-muted small mb-0">Cho tất cả các đơn hàng</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div
+              class="feature-box p-3 border rounded-3 bg-light d-flex flex-column align-items-center text-center h-100"
+            >
+              <span class="fs-4 mb-2">🛡️</span>
+              <p class="fw-bold mb-1" style="color: #8b0a20; font-size: 14px">
+                SẢN PHẨM AN TOÀN
+              </p>
+              <p class="text-muted small mb-0">Cam kết chất lượng</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div
+              class="feature-box p-3 border rounded-3 bg-light d-flex flex-column align-items-center text-center h-100"
+            >
+              <span class="fs-4 mb-2">🎧</span>
+              <p class="fw-bold mb-1" style="color: #8b0a20; font-size: 14px">
+                HỖ TRỢ 24/7
+              </p>
+              <p class="text-muted small mb-0">Tất cả ngày trong tuần</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div
+              class="feature-box p-3 border rounded-3 bg-light d-flex flex-column align-items-center text-center h-100"
+            >
+              <span class="fs-4 mb-2">💵</span>
+              <p class="fw-bold mb-1" style="color: #8b0a20; font-size: 14px">
+                HOÀN LẠI TIỀN
+              </p>
+              <p class="text-muted small mb-0">Nếu không hài lòng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="container mt-5 mb-5 px-4">
+        <h3 class="text-center fw-bold mb-4" style="color: #8b0a20">
+          SẢN PHẨM NỔI BẬT
+        </h3>
+        <div id="products-container" class="row g-4"></div>
+      </section>
+
+      <footer
+        class="mt-5 pt-5 pb-3 bg-light"
+        style="border-top: solid 5px #8b0a20"
+      >
+        <div class="container px-4">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              <img src="../assets/img/logo.jpg" width="140" alt="Spark Logo" />
+            </div>
+            <div class="col-md-8">
+              <div
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-end gap-3"
+              >
+                <h5 class="m-0 fw-bold" style="color: #8b0a20">
+                  ĐĂNG KÝ NHẬN TIN
+                </h5>
+                <div class="input-group" style="max-width: 350px">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Nhập email của bạn"
+                  />
+                  <button class="btn btn-danger text-light">Đăng ký</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row pt-3">
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #8b0a20">VỀ CHÚNG TÔI</h6>
+              <p class="small text-muted">
+                Spark là thương hiệu được thành lập vào năm 2022 với tiêu chí
+                đặt chất lượng sản phẩm lên hàng đầu.
+              </p>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #8b0a20">LIÊN KẾT</h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a href="index.html" class="text-decoration-none text-muted"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="index.html" class="text-decoration-none text-muted"
+                    >Sản phẩm</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="index.html" class="text-decoration-none text-muted"
+                    >Điều khoản</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="index.html" class="text-decoration-none text-muted"
+                    >Liên hệ</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #8b0a20">
+                CHI TIẾT SẢN PHẨM
+              </h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a href="chude.html" class="text-decoration-none text-muted"
+                    >Chủ đề</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="kieudang.html"
+                    class="text-decoration-none text-muted"
+                    >Kiểu dáng</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="hoatuoi.html" class="text-decoration-none text-muted"
+                    >Hoa tươi</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="index.html" class="text-decoration-none text-danger"
+                    >Đang giảm giá</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 small text-muted">
+              <h6 class="fw-bold mb-3" style="color: #8b0a20">LIÊN HỆ</h6>
+              <p class="mb-2">📍 273 An Dương Vương, Q5, TP.HCM</p>
+              <p class="mb-2">📞 0123 456 789 – 0987 654 321</p>
+              <p class="mb-2">✉️ abc@domain.com</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="text-center small text-muted pt-2">
+            <p class="mb-0">Copyright © 2022 Spark. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title fw-bold" style="color: #8b0a20">
+              Giỏ hàng của bạn
+            </h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th>SP</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>SL</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+              </table>
+            </div>
+            <h5 class="text-end mt-3 fw-bold">
+              Tổng: <span id="cart-total" class="text-danger">0</span> VNĐ
+            </h5>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Đóng
+            </button>
+            <button
+              class="btn btn-danger"
+              id="checkoutBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#checkoutModal"
+            >
+              Tiến hành đặt hàng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="checkoutModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title fw-bold" style="color: #8b0a20">
+              Thông tin giao hàng
+            </h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <label class="fw-medium mb-1 small">Tên khách hàng</label>
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="cusName"
+              required
+            />
+
+            <label class="fw-medium mb-1 small">Số điện thoại</label>
+            <input
+              type="tel"
+              class="form-control mb-3"
+              id="cusPhone"
+              required
+            />
+
+            <label class="fw-medium mb-1 small">Địa chỉ giao hàng</label>
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="cusAddress"
+              required
+            />
+
+            <label class="fw-medium mb-1 small">Phương thức thanh toán</label>
+            <select class="form-select mb-2" id="paymentMethod">
+              <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+              <option value="Bank">Chuyển khoản ngân hàng</option>
+              <option value="Momo">Ví Momo</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+            >
+              Quay lại
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              id="confirmOrderBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#doneModal"
+            >
+              Xác nhận
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="doneModal" tabindex="-1">
+      <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+          <div class="modal-body text-center p-4">
+            <h1 class="text-success mb-3">✔️</h1>
+            <h5 class="fw-bold">Đặt hàng thành công!</h5>
+            <p class="text-muted small">Cảm ơn bạn đã tin tưởng Spark.</p>
+            <button class="btn btn-danger w-100 mt-2" data-bs-dismiss="modal">
+              Tiếp tục mua sắm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="toast-container position-fixed bottom-0 end-0 p-3"
+      style="z-index: 1100"
+    >
+      <div
+        id="toastAddCart"
+        class="toast align-items-center text-bg-success border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body fw-medium">✔️ Đã thêm vào giỏ hàng!</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,72 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Custom Colors Hover for Navbar */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #8b0a20 !important;
+}
+
+/* Feature Box Enhancements */
+.feature-box {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-color: #8b0a20 !important;
+}
+
+/* Footer Link Hovers */
+.custom-link-list a:hover {
+  color: #8b0a20 !important;
+  text-decoration: underline !important;
+}
+
+/* Nút bấm (Button) Customize */
+.btn-danger {
+  background-color: #d3213f;
+  border-color: #d3213f;
+}
+
+.btn-danger:hover {
+  background-color: #8b0a20;
+  border-color: #8b0a20;
+}
+
+/* Tinh chỉnh Icon thanh công cụ (Header) */
+header .text-danger {
+  color: #d3213f !important;
+  transition: color 0.3s ease;
+}
+
+header .text-danger:hover {
+  color: #8b0a20 !important;
+}
+
+/* Hiệu ứng Dropdown Navbar */
+.dropdown-menu {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
