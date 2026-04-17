@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thành viên Sweet Cravings</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/members-ship.css">
+
+  </head>
+
+  <body class="bg-light">
+    <div class="container shadow-sm bg-white p-0">
+
+      <!-- HEADER -->
+      <header class="py-3 border-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3 flex-wrap " 
+        >
+          <div class="logo">
+            <img
+              src="../assets/img/logo.jpg"
+              alt="Logo"
+              class="img-fluid rounded-circle"
+              width="100"
+            />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="about.html">Về chúng tôi</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link px-3" href="members-ship.html">Membership</a>
+                 </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Socola các loại</a
+                      >
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Bánh ngọt & Capcake</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Kẹo dẻo & Marshmallow</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-2"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Quà tặng</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Hộp quà Socola</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Giỏ quà Bánh kẹo</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-2  href="index.html"
+                    >Đang giảm giá</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="news.html">Thông báo mới</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <form id="searchForm" class="d-none d-md-block">
+              <div class="input-group">
+                <input
+                  id="search-inp"
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tìm bánh, kẹo, socola..."
+                />
+                <button class="btn btn-danger btn-sm" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <div class="dropdown">
+              <a
+                class="text-danger dropdown-toggle text-decoration-none"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.832 1.664C2.154 12.333 2.001 13.078 2 13.324z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                <li>
+                  <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+
+            <!--  GIỎ HÀNG -->
+            <a
+              class="text-danger position-relative text-decoration-none"
+              href="cart.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.65rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- PHẦN VÂN LÀM -->
+
+      <!-- Phần nội dung nổi bật với card nha-->
+      <section class="container my-4">
+        <div class="membership-hero p-4 p-md-5">
+          <div class="row align-items-center g-4">
+
+            <!-- Nội dung nổi bật -->
+            <div class="col-lg-7">
+              <span class="badge bg-danger-subtle text-danger mb-3 px-3 py-2">
+                Sweet Cravings Membership
+              </span>
+              <h1 class="fw-bold membership-title mb-3">
+                Trở thành hội viên ngọt ngào của Sweet Cravings
+              </h1>
+              <p class="membership-subtitle fs-5 mb-4">
+                Tích điểm cho mỗi đơn hàng, nhận ưu đãi sinh nhật, giảm giá độc
+                quyền và nhiều quà tặng hấp dẫn dành riêng cho thành viên.
+              </p>
+
+              <!-- 2 cái nút đăng kí và xem hạng, xài link tới form với hạng -->
+              <div class="d-flex gap-3 flex-wrap">
+                <a href="#register-membership" class="btn btn-sweet px-4 py-2">
+                  Đăng ký ngay
+                </a>
+                <a href="#tiers" class="btn btn-outline-danger px-4 py-2">
+                  Xem hạng thành viên
+                </a>
+              </div>
+            </div>
+              <!-- card -->
+            <div class="col-lg-5">
+
+              <!-- div này cho nó thành cột, mỗi hàng nội dung là một thẻ div -->
+              <div
+                class="member-card-demo p-4 d-flex flex-column justify-content-between"
+              >
+                <div class="d-flex justify-content-between align-items-start">
+
+                  <!-- Phần tên card với cái chip -->
+                  <div>
+                    <p class="mb-1 small">Sweet Cravings</p>
+                    <h4 class="fw-bold mb-0">MEMBER CARD</h4>
+                  </div>
+                  <div class="member-chip"></div>
+                </div>
+
+                <!-- Phần tên -->
+                <div class="mt-4">
+                  <p class="mb-1 small text-white-50">Tên hội viên</p>
+                  <h5 class="fw-bold">NGUYỄN VĂN A</h5>
+                </div>
+                  <!-- Phần hạng với điểm -->
+                <div
+                  class="d-flex justify-content-between align-items-end mt-4"
+                >
+                  <div>
+                    <p class="mb-1 small text-white-50">Hạng thành viên</p>
+                    <strong>Gold Member</strong>
+                  </div>
+                  <div>
+                    <p class="mb-1 small text-white-50">Điểm hiện có</p>
+                    <strong>2,450 điểm</strong>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần quyền lợi hội viên-->
+      <section class="container my-5">
+        <h2 class="text-center fw-bold membership-title mb-4">
+          QUYỀN LỢI HỘI VIÊN
+        </h2>
+
+        <!-- Dòng các quyền lợi -->
+        <div class="row g-4 ">
+          <!-- Quyền lợi 1 -->
+          <div class="col-md-3 col-6">
+            <div class="benefit-card bg-light p-4 text-center h-100">
+              <div class="benefit-icon mb-3">🎁</div>
+              <h5 class="fw-bold text-sweet">Quà sinh nhật</h5>
+              <p class="text-muted small mb-0">
+                Nhận ưu đãi đặc biệt vào tháng sinh nhật của bạn.
+              </p>
+            </div>
+          </div>
+
+            <!-- Quyền lợi 2 -->
+          <div class="col-md-3 col-6">
+            <div class="benefit-card bg-light p-4 text-center h-100">
+              <div class="benefit-icon mb-3">💎</div>
+              <h5 class="fw-bold text-sweet">Tích điểm đổi quà</h5>
+              <p class="text-muted small mb-0">
+                Mỗi đơn hàng đều được cộng điểm để đổi voucher hấp dẫn.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quyền lợi 3 -->
+          <div class="col-md-3 col-6">
+            <div class="benefit-card bg-light p-4 text-center h-100">
+              <div class="benefit-icon mb-3">🔥</div>
+              <h5 class="fw-bold text-sweet">Ưu đãi độc quyền</h5>
+              <p class="text-muted small mb-0">
+                Thành viên được nhận mã giảm giá riêng mỗi tháng.
+              </p>
+            </div>
+          </div>
+
+          <!-- Quyền lợi 4 -->
+          <div class="col-md-3 col-6">
+            <div class="benefit-card bg-light p-4 text-center h-100">
+              <div class="benefit-icon mb-3">🚚</div>
+              <h5 class="fw-bold text-sweet">Ưu tiên giao hàng</h5>
+              <p class="text-muted small mb-0">
+                Một số hạng thành viên được hỗ trợ giao hàng nhanh hơn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hạng thành viên -->
+      <section id="tiers" class="container my-5">
+        <h2 class="text-center fw-bold membership-title mb-2">
+          HẠNG THÀNH VIÊN
+        </h2>
+        <p class="text-center text-muted mb-4">
+          Nâng hạng càng cao, ưu đãi càng hấp dẫn.
+        </p>
+
+        <!-- Phần hạng thành viên -->
+        <div class="row g-4">
+
+          <!-- Hạng 1 -->
+          <div class="col-lg-4">
+            <div class="tier-card h-100 p-4 bg-white text-center">
+              <div class="tier-icon mb-3">🥉</div>
+              <h4 class="fw-bold text-sweet">Silver</h4>
+              <p class="text-muted">Dành cho thành viên mới</p>
+              <h3 class="fw-bold mb-3">0 - 999 điểm</h3>
+              <ul class="list-unstyled text-muted small perk-list text-center">
+                <li>Tích điểm 3% trên mỗi đơn hàng</li>
+                <li>Nhận thông báo ưu đãi sớm</li>
+                <li>Voucher chào mừng thành viên mới</li>
+              </ul>
+              <button class="btn btn-outline-danger mt-3">Bắt đầu ngay</button>
+            </div>
+          </div>
+          <!-- Hạng 2 -->
+          <div class="col-lg-4">
+            <div
+              class="tier-card active h-100 p-4 bg-white text-center position-relative"
+            >
+              <!-- Cái này là cho tiêu đề nó nổi trên đầu card -->
+              <div class="position-absolute top-0 start-50 translate-middle">
+                <span class="tier-badge">Phổ biến nhất</span>
+              </div>
+              <div class="tier-icon mb-3 mt-3">🥇</div>
+              <h4 class="fw-bold text-sweet">Gold</h4>
+              <p class="text-muted">Cho khách hàng thân thiết</p>
+              <h3 class="fw-bold mb-3">1,000 - 2,999 điểm</h3>
+              <ul class="list-unstyled text-muted small perk-list text-center">
+                <li>Tích điểm 5% trên mỗi đơn hàng</li>
+                <li>Voucher sinh nhật giá trị cao hơn</li>
+                <li>Ưu tiên tham gia chương trình flash sale</li>
+              </ul>
+              <button class="btn btn-sweet mt-3">Chọn hạng này</button>
+            </div>
+          </div>
+
+          <!-- Hạng 3 -->
+          <div class="col-lg-4">
+            <div class="tier-card h-100 p-4 bg-white text-center">
+              <div class="tier-icon mb-3">👑</div>
+              <h4 class="fw-bold text-sweet">Platinum</h4>
+              <p class="text-muted">Hạng cao cấp nhất</p>
+              <h3 class="fw-bold mb-3">Từ 3,000 điểm</h3>
+              <ul class="list-unstyled text-muted small perk-list text-center">
+                <li>Tích điểm 7% trên mỗi đơn hàng</li>
+                <li>Miễn phí giao hàng cho đơn đủ điều kiện</li>
+                <li>Quà tặng độc quyền theo mùa</li>
+              </ul>
+              <button class="btn btn-outline-danger mt-3">Khám phá thêm</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần form đăng kí với vì sao tham gia -->
+      <section id="register-membership" class="container my-5">
+
+        <!-- tạo một hàng trong đó mới chia 2 cột -->
+        <div class="row g-4 align-items-stretch">
+
+          <!-- Phần này là div chứa cái form -->
+          <div class="col-lg-7">
+            <div class="form-box bg-light p-4 p-md-5 h-100">
+              <h2 class="fw-bold membership-title mb-3">Đăng ký hội viên</h2>
+              <p class="text-muted mb-4">
+                Điền thông tin để trở thành thành viên Sweet Cravings và nhận
+                ngay ưu đãi chào mừng.
+              </p>
+
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label fw-medium">Họ và tên</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nhập họ và tên"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label fw-medium">Số điện thoại</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Nhập số điện thoại"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label fw-medium">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Nhập email"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label fw-medium">Ngày sinh</label>
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label fw-medium">Địa chỉ</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nhập địa chỉ của bạn"
+                    />
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label fw-medium">Hạng đăng ký</label>
+                    <select class="form-select">
+                      <option selected>Chọn hạng thành viên</option>
+                      <option>Silver</option>
+                      <option>Gold</option>
+                      <option>Platinum</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="agree"
+                      />
+                      <label
+                        class="form-check-label text-muted small"
+                        for="agree"
+                      >
+                        Tôi đồng ý nhận thông tin khuyến mãi và chính sách hội
+                        viên.
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-sweet px-4 py-2">
+                      Đăng ký thành viên
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Phần tại sao nên tham gia -->
+          <div class="col-lg-5">
+            <div class="form-box bg-white p-4 p-md-5 h-100">
+              <h4 class="fw-bold text-sweet mb-4 ">Tại sao nên tham gia?</h4>
+              <ul class="list-unstyled perk-list text-muted">
+                <li>Nhận quà tặng cho đơn hàng đầu tiên</li>
+                <li>Tích điểm nhanh khi mua socola, bánh ngọt, kẹo dẻo</li>
+                <li>Nhận mã giảm giá riêng vào dịp sinh nhật</li>
+                <li>Cập nhật sản phẩm mới và chương trình ưu đãi sớm</li>
+                <li>Cơ hội đổi quà và nhận hộp quà ngọt ngào theo mùa</li>
+              </ul>
+
+              <hr class="my-4" />
+
+              <!-- Phần ưu đãi bên dưới -->
+
+              <h5 class="fw-bold text-sweet mb-3">Ưu đãi chào mừng</h5>
+              <div class="p-3 rounded-4" style="background-color: #fff0f6">
+                <p class="mb-1 fw-bold">Giảm ngay 10% cho đơn đầu tiên</p>
+                <p class="mb-0 text-muted small">
+                  Áp dụng cho hội viên đăng ký mới trong hôm nay.
+                </p>
+              </div>
+
+              <div class="p-3 rounded-4 mt-3" style="background-color: #fff0f6">
+                <p class="mb-1 fw-bold">Giảm ngay 5% cho đơn thứ hai</p>
+                <p class="mb-0 text-muted small">
+                  Áp dụng cho hội viên đăng ký mới trong hôm nay.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="container my-5">
+        <div class="faq-box bg-white p-4 p-md-5">
+          <h2 class="fw-bold membership-title text-center mb-4">
+            CÂU HỎI THƯỜNG GẶP
+          </h2>
+
+          <div class="accordion" id="membershipFaq">
+
+            <!-- Từng câu hỏi -->
+            <div class="accordion-item border-0 border-bottom">
+             <!-- cau hoi -->
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#faq1"
+                >
+                  Đăng ký thành viên có mất phí không?
+                </button>
+              </h2>
+
+              <!-- câu trả lời, dùng show để mở sẵn 1 cái -->
+              <div
+                id="faq1"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#membershipFaq"
+              >
+                <div class="accordion-body text-muted">
+                  Không. Việc đăng ký hội viên Sweet Cravings hoàn toàn miễn
+                  phí.
+                </div>
+              </div>
+            </div>
+
+            <!-- cau hoi 2 -->
+            <div class="accordion-item border-0 border-bottom">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  Điểm thành viên được tính như thế nào?
+                </button>
+              </h2>
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#membershipFaq"
+              >
+                <div class="accordion-body text-muted">
+                  Sau mỗi đơn hàng thành công, hệ thống sẽ cộng điểm theo hạng
+                  thành viên của bạn.
+                </div>
+              </div>
+            </div>
+
+            <!-- cau hoi 3 -->
+
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                >
+                  Tôi có thể nâng hạng thành viên không?
+                </button>
+              </h2>
+              <div
+                id="faq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#membershipFaq"
+              >
+                <div class="accordion-body text-muted">
+                  Có. Khi tích lũy đủ số điểm yêu cầu, bạn sẽ được nâng hạng tự
+                  động để nhận thêm nhiều ưu đãi hơn.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="mt-5 pt-5 pb-3 bg-light"
+        style="border-top: solid 5px #d81b60"
+      >
+        <div class="container px-4">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              <img
+                src="../assets/img/logo.jpg"
+                width="140"
+                alt="Sweet Cravings Logo"
+                class="rounded-circle"
+              />
+            </div>
+            <div class="col-md-8">
+              <div
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-end gap-3"
+              >
+                <h5 class="m-0 fw-bold" style="color: #d81b60">
+                  ĐĂNG KÝ NHẬN TIN
+                </h5>
+                <div class="input-group" style="max-width: 350px">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Nhập email của bạn"
+                  />
+                  <button class="btn btn-danger text-light">Đăng ký</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row pt-3">
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">VỀ CHÚNG TÔI</h6>
+              <p class="small text-muted">
+                Sweet Cravings là thế giới bánh ngọt, socola và quà tặng ngọt
+                ngào dành cho mọi khoảnh khắc đặc biệt.
+              </p>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">
+                LIÊN KẾT NHANH
+              </h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a href="about.html" class="text-decoration-none text-muted">
+                    Về chúng tôi
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                  >
+                    Sản phẩm
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="members-ship.html"
+                    class="text-decoration-none text-muted"
+                  >
+                    Membership
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="sidemap.html"
+                    class="text-decoration-none text-muted"
+                  >
+                    Sơ đồ Website
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">DANH MỤC</h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                  >
+                    Socola Nghệ Thuật
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                  >
+                    Bánh Ngọt & Cupcake
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a href="news.html" class="text-decoration-none text-muted">
+                    Tin tức & Blog
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                  >
+                    Flash Sale Đồ Ngọt
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 small text-muted">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">LIÊN HỆ</h6>
+              <p class="mb-2">
+                📍 Số 12 Nguyễn Văn Bảo, Phường Hạnh Thông, Gò Vấp, TP.HCM
+              </p>
+              <p class="mb-2">📞 0123 456 789 - 0987 654 321</p>
+              <p class="mb-2">✉️ sweetcravings@gmail.com</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="text-center small text-muted pt-2">
+            <p class="mb-0">
+              Copyright © 2026 Sweet Cravings. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
