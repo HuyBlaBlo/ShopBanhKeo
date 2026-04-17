@@ -1,3 +1,6 @@
+/* ================================================================== */
+/* INDEX */
+/* INDEX NÀY DÙNG CHUNG CHO NHỮNG TRANG LIÊN QUAN */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -61,4 +64,89 @@ header .text-danger:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* =========================================================================== */
+/* MEMBERSHIP */
+.membership-hero {
+  background: linear-gradient(135deg, #fff0f6, #ffe3ec);
+  border-radius: 20px;
+}
+
+.membership-title {
+  color: #d81b60;
+}
+
+.membership-subtitle {
+  color: #6c757d;
+}
+
+.benefit-card,
+.tier-card,
+.form-box,
+.member-card-demo,
+.faq-box {
+  border-radius: 18px;
+  border: 1px solid #f3d3df;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-icon,
+.tier-icon {
+  font-size: 2rem;
+}
+
+.tier-card.active {
+  border: 2px solid #d81b60;
+  /* transform: translateY(-4px); */
+}
+
+.tier-badge {
+  background-color: #d81b60;
+  color: white;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+
+.btn-sweet {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+}
+
+.btn-sweet:hover {
+  background-color: #c2185b;
+  color: white;
+}
+
+.text-sweet {
+  color: #d81b60;
+}
+
+.member-card-demo {
+  background: linear-gradient(135deg, #d81b60, #f06292);
+  color: white;
+  min-height: 220px;
+}
+
+.member-chip {
+  width: 48px;
+  height: 36px;
+  background: linear-gradient(135deg, #f8d7a4, #d4a373);
+  border-radius: 8px;
+}
+
+.perk-list li {
+  margin-bottom: 10px;
+}
+
+.faq-box .accordion-button:not(.collapsed) {
+  background-color: #fff0f6;
+  color: #d81b60;
+  box-shadow: none;
+}
+
+.faq-box .accordion-button:focus {
+  box-shadow: none;
+  /* border-color: #f3d3df; */
 }

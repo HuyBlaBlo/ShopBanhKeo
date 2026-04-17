@@ -1,269 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-<meta charset="UTF-8">
-<title>Thanh toán</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thanh toán</title>
 
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<script src="../js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="../css/pay.css">
-</head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/pay.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="header">Thanh toán</div>
 
-<div class="header">Thanh toán</div>
-
-<!-- THÔNG TIN NGƯỜI NHẬN -->
-<div class="card-custom" data-bs-toggle="modal" data-bs-target="#addressModal" style="cursor:pointer;"> 
-    <div class="d-flex justify-content-between"> 
-        <span class="title">📍 Thông tin người nhận</span> 
-    </div> <div class="mt-2"> 
+    <!-- THÔNG TIN NGƯỜI NHẬN -->
+    <div
+      class="card-custom"
+      data-bs-toggle="modal"
+      data-bs-target="#addressModal"
+      style="cursor: pointer"
+    >
+      <div class="d-flex justify-content-between">
+        <span class="title">📍 Thông tin người nhận</span>
+      </div>
+      <div class="mt-2">
         <b>Chưa có địa chỉ</b>
-        <br> 
-        <span class="small-text">Nhấn để thêm</span> 
-    </div> 
-</div>
-
-<!-- SẢN PHẨM -->
-<div class="card-custom">
-    <div class="d-flex justify-content-between">
-        <span class="title">Chi tiết sản phẩm</span>
-        <span data-bs-toggle="modal" data-bs-target="#noteModal" style="cursor:pointer;">
-            Thêm ghi chú
-        </span>
+        <br />
+        <span class="small-text">Nhấn để thêm</span>
+      </div>
     </div>
 
-    <div class="d-flex mt-3">
-        <img src="../assets/img/logo.jpg" class="product-img me-3">
+    <!-- SẢN PHẨM -->
+    <div class="card-custom">
+      <div class="d-flex justify-content-between">
+        <span class="title">Chi tiết sản phẩm</span>
+        <span
+          data-bs-toggle="modal"
+          data-bs-target="#noteModal"
+          style="cursor: pointer"
+        >
+          Thêm ghi chú
+        </span>
+      </div>
+
+      <div class="d-flex mt-3">
+        <img src="../assets/img/logo.jpg" class="product-img me-3" />
 
         <div class="flex-grow-1">
-            <div>Bánh ngàn lớp trái cây</div>
-            <div class="small-text">Combo 4</div>
-            <div class="text-danger fw-bold">117.800đ</div>
+          <div>Bánh ngàn lớp trái cây</div>
+          <div class="small-text">Combo 4</div>
+          <div class="text-danger fw-bold">117.800đ</div>
         </div>
 
         <div>x1</div>
+      </div>
     </div>
-</div>
 
-<!-- VOUCHER -->
-<div class="card-custom d-flex justify-content-between"
-     data-bs-toggle="modal" data-bs-target="#voucherModal"
-     style="cursor:pointer;">
-    <span class="title">🎟 Giảm giá của Shop</span>
-    <span>Chọn voucher ›</span>
-</div>
+    <!-- VOUCHER -->
+    <div
+      class="card-custom d-flex justify-content-between"
+      data-bs-toggle="modal"
+      data-bs-target="#voucherModal"
+      style="cursor: pointer"
+    >
+      <span class="title">🎟 Giảm giá của Shop</span>
+      <span>Chọn voucher ›</span>
+    </div>
 
-<!-- PHƯƠNG THỨC THANH TOÁN -->
-<div class="card-custom">
-    <div class="title mb-2">Phương thức thanh toán</div>
+    <!-- PHƯƠNG THỨC THANH TOÁN -->
+    <div class="card-custom">
+      <div class="title mb-2">Phương thức thanh toán</div>
 
-    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div class="d-flex justify-content-between align-items-center mb-2">
         <span>💳 Chuyển khoản</span>
-        <input type="radio" name="payment" checked>
-    </div>
+        <input type="radio" name="payment" checked />
+      </div>
 
-    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-between align-items-center">
         <span>💵 Thanh toán khi nhận hàng</span>
-        <input type="radio" name="payment">
+        <input type="radio" name="payment" />
+      </div>
     </div>
-</div>
 
-<!-- CHI TIẾT THANH TOÁN -->
-<div class="card-custom">
-    <div class="title mb-2">Chi tiết thanh toán</div>
+    <!-- CHI TIẾT THANH TOÁN -->
+    <div class="card-custom">
+      <div class="title mb-2">Chi tiết thanh toán</div>
 
-    <!-- TIỀN HÀNG -->
-    <div class="d-flex justify-content-between align-items-center"
-         data-bs-toggle="collapse"
-         data-bs-target="#tienHangDetail"
-         style="cursor:pointer;">
+      <!-- TIỀN HÀNG -->
+      <div
+        class="d-flex justify-content-between align-items-center"
+        data-bs-toggle="collapse"
+        data-bs-target="#tienHangDetail"
+        style="cursor: pointer"
+      >
         <span>Tiền hàng</span>
         <span>117.800đ</span>
-    </div>
+      </div>
 
-    <div id="tienHangDetail" class="collapse mt-2 small-text">
+      <div id="tienHangDetail" class="collapse mt-2 small-text">
         <div class="d-flex justify-content-between">
-            <span>Giá gốc</span>
-            <span>134.000đ</span>
+          <span>Giá gốc</span>
+          <span>134.000đ</span>
         </div>
         <div class="d-flex justify-content-between text-danger">
-            <span>Giảm giá sản phẩm</span>
-            <span>-16.200đ</span>
+          <span>Giảm giá sản phẩm</span>
+          <span>-16.200đ</span>
         </div>
-    </div>
+      </div>
 
-    <!-- PHÍ SHIP -->
-    <div class="d-flex justify-content-between mt-2">
+      <!-- PHÍ SHIP -->
+      <div class="d-flex justify-content-between mt-2">
         <span>Phí vận chuyển</span>
         <span>35.000đ</span>
-    </div>
+      </div>
 
-    <!-- KHÁC -->
-    <div class="d-flex justify-content-between align-items-center mt-2"
-         data-bs-toggle="collapse"
-         data-bs-target="#khacDetail"
-         style="cursor:pointer;">
+      <!-- KHÁC -->
+      <div
+        class="d-flex justify-content-between align-items-center mt-2"
+        data-bs-toggle="collapse"
+        data-bs-target="#khacDetail"
+        style="cursor: pointer"
+      >
         <span>Khác</span>
         <span>4.180đ</span>
-    </div>
+      </div>
 
-    <div id="khacDetail" class="collapse mt-2 small-text">
+      <div id="khacDetail" class="collapse mt-2 small-text">
         <div class="d-flex justify-content-between">
-            <span>Thuế GTGT</span>
-            <span>4.180đ</span>
+          <span>Thuế GTGT</span>
+          <span>4.180đ</span>
         </div>
-    </div>
+      </div>
 
-    <hr>
+      <hr />
 
-    <!-- TỔNG -->
-    <div id="tong" class="d-flex justify-content-between fw-bold">
+      <!-- TỔNG -->
+      <div id="tong" class="d-flex justify-content-between fw-bold">
         <span>Tổng</span>
         <span class="text-danger">156.980đ</span>
+      </div>
     </div>
 
-</div>
-
-<!-- BOTTOM -->
-<div class="bottom-bar d-flex justify-content-between align-items-center">
-    <div>
+    <!-- BOTTOM -->
+    <div class="bottom-bar d-flex justify-content-between align-items-center">
+      <div>
         <div class="fw-bold text-danger">156.980đ</div>
         <div class="small-text">Tiết kiệm 16.200đ</div>
+      </div>
+
+      <button class="btn btn-main px-4">Thanh toán</button>
     </div>
 
-    <button class="btn btn-main px-4">Thanh toán</button>
-</div>
+    <!-- ================= MODAL ================= -->
+    <!-- MODAL ĐỊA CHỈ -->
+    <div class="modal fade" id="addressModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Thêm địa chỉ</h5>
+          </div>
+          <div class="modal-body">
+            <input class="form-control mb-2" placeholder="Họ và tên" />
+            <input class="form-control mb-2" placeholder="Số điện thoại" />
+            <select class="form-control mb-2">
+              <option value="">Chọn Tỉnh / Thành</option>
+              <option>An Giang</option>
+              <option>Bà Rịa - Vũng Tàu</option>
+              <option>Bắc Giang</option>
+              <option>Bắc Kạn</option>
+              <option>Bạc Liêu</option>
+              <option>Bắc Ninh</option>
+              <option>Bến Tre</option>
+              <option>Bình Định</option>
+              <option>Bình Dương</option>
+              <option>Bình Phước</option>
+              <option>Bình Thuận</option>
+              <option>Cà Mau</option>
+              <option>Cần Thơ</option>
+              <option>Cao Bằng</option>
+              <option>Đà Nẵng</option>
+              <option>Đắk Lắk</option>
+              <option>Đắk Nông</option>
+              <option>Điện Biên</option>
+              <option>Đồng Nai</option>
+              <option>Đồng Tháp</option>
+              <option>Gia Lai</option>
+              <option>Hà Giang</option>
+              <option>Hà Nam</option>
+              <option>Hà Nội</option>
+              <option>Hà Tĩnh</option>
+              <option>Hải Dương</option>
+              <option>Hải Phòng</option>
+              <option>Hậu Giang</option>
+              <option>Hòa Bình</option>
+              <option>Hưng Yên</option>
+              <option>Khánh Hòa</option>
+              <option>Kiên Giang</option>
+              <option>Kon Tum</option>
+              <option>Lai Châu</option>
+              <option>Lâm Đồng</option>
+              <option>Lạng Sơn</option>
+              <option>Lào Cai</option>
+              <option>Long An</option>
+              <option>Nam Định</option>
+              <option>Nghệ An</option>
+              <option>Ninh Bình</option>
+              <option>Ninh Thuận</option>
+              <option>Phú Thọ</option>
+              <option>Phú Yên</option>
+              <option>Quảng Bình</option>
+              <option>Quảng Nam</option>
+              <option>Quảng Ngãi</option>
+              <option>Quảng Ninh</option>
+              <option>Quảng Trị</option>
+              <option>Sóc Trăng</option>
+              <option>Sơn La</option>
+              <option>Tây Ninh</option>
+              <option>Thái Bình</option>
+              <option>Thái Nguyên</option>
+              <option>Thanh Hóa</option>
+              <option>Thừa Thiên Huế</option>
+              <option>Tiền Giang</option>
+              <option>TP. Hồ Chí Minh</option>
+              <option>Trà Vinh</option>
+              <option>Tuyên Quang</option>
+              <option>Vĩnh Long</option>
+              <option>Vĩnh Phúc</option>
+              <option>Yên Bái</option>
+            </select>
 
-<!-- ================= MODAL ================= -->
-<!-- MODAL ĐỊA CHỈ --> 
- <div class="modal fade" id="addressModal">
-     <div class="modal-dialog"> 
-        <div class="modal-content"> 
-            <div class="modal-header"> 
-                <h5 class="modal-title">Thêm địa chỉ</h5> 
-            </div> 
-            <div class="modal-body"> 
-                <input class="form-control mb-2" placeholder="Họ và tên"> 
-                <input class="form-control mb-2" placeholder="Số điện thoại"> 
-                <select class="form-control mb-2"> 
-                    <option value="">Chọn Tỉnh / Thành</option> 
-                    <option>An Giang</option> 
-                    <option>Bà Rịa - Vũng Tàu</option> 
-                    <option>Bắc Giang</option> 
-                    <option>Bắc Kạn</option> 
-                    <option>Bạc Liêu</option> 
-                    <option>Bắc Ninh</option> 
-                    <option>Bến Tre</option> 
-                    <option>Bình Định</option> 
-                    <option>Bình Dương</option> 
-                    <option>Bình Phước</option> 
-                    <option>Bình Thuận</option> 
-                    <option>Cà Mau</option> 
-                    <option>Cần Thơ</option> 
-                    <option>Cao Bằng</option> 
-                    <option>Đà Nẵng</option> 
-                    <option>Đắk Lắk</option> 
-                    <option>Đắk Nông</option> 
-                    <option>Điện Biên</option> 
-                    <option>Đồng Nai</option> 
-                    <option>Đồng Tháp</option> 
-                    <option>Gia Lai</option> 
-                    <option>Hà Giang</option> 
-                    <option>Hà Nam</option> 
-                    <option>Hà Nội</option> 
-                    <option>Hà Tĩnh</option> 
-                    <option>Hải Dương</option> 
-                    <option>Hải Phòng</option> 
-                    <option>Hậu Giang</option> 
-                    <option>Hòa Bình</option> 
-                    <option>Hưng Yên</option> 
-                    <option>Khánh Hòa</option> 
-                    <option>Kiên Giang</option> 
-                    <option>Kon Tum</option> 
-                    <option>Lai Châu</option> 
-                    <option>Lâm Đồng</option> 
-                    <option>Lạng Sơn</option> 
-                    <option>Lào Cai</option> 
-                    <option>Long An</option> 
-                    <option>Nam Định</option> 
-                    <option>Nghệ An</option> 
-                    <option>Ninh Bình</option> 
-                    <option>Ninh Thuận</option> 
-                    <option>Phú Thọ</option> 
-                    <option>Phú Yên</option> 
-                    <option>Quảng Bình</option> 
-                    <option>Quảng Nam</option> 
-                    <option>Quảng Ngãi</option> 
-                    <option>Quảng Ninh</option> 
-                    <option>Quảng Trị</option> 
-                    <option>Sóc Trăng</option> 
-                    <option>Sơn La</option> 
-                    <option>Tây Ninh</option> 
-                    <option>Thái Bình</option> 
-                    <option>Thái Nguyên</option> 
-                    <option>Thanh Hóa</option> 
-                    <option>Thừa Thiên Huế</option> 
-                    <option>Tiền Giang</option> 
-                    <option>TP. Hồ Chí Minh</option> 
-                    <option>Trà Vinh</option> 
-                    <option>Tuyên Quang</option> 
-                    <option>Vĩnh Long</option> 
-                    <option>Vĩnh Phúc</option> 
-                    <option>Yên Bái</option> 
-                </select> 
+            <select class="form-control mb-2">
+              <option>Quận / Huyện</option>
+            </select>
 
-                <select class="form-control mb-2"> 
-                    <option>Quận / Huyện</option> 
-                </select> 
+            <select class="form-control mb-2">
+              <option>Phường / Xã</option>
+            </select>
 
-                <select class="form-control mb-2"> 
-                    <option>Phường / Xã</option> 
-                </select> 
+            <input class="form-control" placeholder="Số nhà, đường" />
+          </div>
 
-                <input class="form-control" placeholder="Số nhà, đường"> 
-            </div> 
+          <div class="modal-footer d-flex justify-content-between">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Hủy bỏ
+            </button>
+            <button class="btn btn-danger">Thêm địa chỉ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- GHI CHÚ -->
+    <div class="modal fade" id="noteModal">
+      <div class="modal-dialog modal-dialog-bottom">
+        <div class="modal-content p-3">
+          <h5>Ghi chú đơn hàng</h5>
+          <textarea
+            class="form-control"
+            rows="4"
+            placeholder="Nhập ghi chú..."
+          ></textarea>
 
-            <div class="modal-footer d-flex justify-content-between"> 
-                <button class="btn btn-secondary" data-bs-dismiss="modal">Hủy bỏ</button> 
-                <button class="btn btn-danger">Thêm địa chỉ</button> 
-            </div> 
-        </div> 
-    </div> 
-</div>
-<!-- GHI CHÚ -->
-<div class="modal fade" id="noteModal">
-<div class="modal-dialog modal-dialog-bottom">
-<div class="modal-content p-3">
-
-    <h5>Ghi chú đơn hàng</h5>
-    <textarea class="form-control" rows="4" placeholder="Nhập ghi chú..."></textarea>
-
-    <div class="d-flex justify-content-end mt-3">
-        <button class="btn btn-secondary me-2" data-bs-dismiss="modal">Đóng</button>
-        <button class="btn btn-main">Lưu</button>
+          <div class="d-flex justify-content-end mt-3">
+            <button class="btn btn-secondary me-2" data-bs-dismiss="modal">
+              Đóng
+            </button>
+            <button class="btn btn-main">Lưu</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-</div>
-</div>
-</div>
+    <!-- VOUCHER -->
+    <div class="modal fade" id="voucherModal">
+      <div class="modal-dialog modal-dialog-bottom">
+        <div class="modal-content p-3">
+          <h5>Ưu đãi</h5>
+          <input class="form-control mt-2" placeholder="Nhập mã ưu đãi" />
 
-<!-- VOUCHER -->
-<div class="modal fade" id="voucherModal">
-<div class="modal-dialog modal-dialog-bottom">
-<div class="modal-content p-3">
-
-    <h5>Ưu đãi</h5>
-    <input class="form-control mt-2" placeholder="Nhập mã ưu đãi">
-
-    <div class="d-flex justify-content-end mt-3">
-        <button class="btn btn-secondary me-2" data-bs-dismiss="modal">Đóng</button>
-        <button class="btn btn-main">Áp dụng</button>
+          <div class="d-flex justify-content-end mt-3">
+            <button class="btn btn-secondary me-2" data-bs-dismiss="modal">
+              Đóng
+            </button>
+            <button class="btn btn-main">Áp dụng</button>
+          </div>
+        </div>
+      </div>
     </div>
-
-</div>
-</div>
-</div>
-
-</body>
+  </body>
 </html>
