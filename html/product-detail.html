@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="vn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Giới Đồ Ngọt Sweet Cravings</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="container shadow-sm bg-white p-0">
+      <header class="py-3 border-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3 flex-wrap"
+        >
+          <div class="logo">
+            <img
+              src="../assets/img/logo.jpg"
+              alt="Logo"
+              class="img-fluid rounded-circle"
+              width="100"
+            />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="about.html">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="members-ship.html"
+                    >Membership</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Socola các loại</a
+                      >
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Bánh ngọt & Capcake</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Kẹo dẻo & Marshmallow</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-2"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Quà tặng</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Hộp quà Socola</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Giỏ quà Bánh kẹo</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Đang giảm giá</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="news.html">Thông báo mới</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <form id="searchForm" class="d-none d-md-block">
+              <div class="input-group">
+                <input
+                  id="search-inp"
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tìm bánh, kẹo, socola..."
+                />
+                <button class="btn btn-danger btn-sm" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <div class="dropdown">
+              <a
+                class="text-danger dropdown-toggle text-decoration-none"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.832 1.664C2.154 12.333 2.001 13.078 2 13.324z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                <li>
+                  <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+
+            <!--  GIỎ HÀNG -->
+            <a
+              class="text-danger position-relative text-decoration-none"
+              href="cart.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.65rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ANH EM VIẾT PHẦN CỦA MÌNH TỪ ĐAY XUỐNG NHA BỎ ĐOẠN CODE BÊN DƯỚI ĐI-->
+      <!-- CÁC TRANG CÓ LIÊN QUAN ĐẾN TRANG INDEX THÌ VIẾT TỪ ĐÂY XUỐNG  -->
+      <!-- CÁC TRANG LIÊN QUAN XÓA TỪ ĐÂY XUỐNG DÒNG 252 (TRÊN PHẦN FOOTER) -->
+
+      <div class="container mt-4 mb-5">
+        <!-- product -->
+        <div class="row g-4">
+          <!-- left col: img -->
+          <div class="col-md-5">
+            <div
+              class="product-image-container rounded-3 overflow-hidden border"
+            >
+              <img
+                src="../assets/img/catbkla.png.webp"
+                id="product-img"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <!-- middle col: inf -->
+          <div class="col-md-4">
+            <h1 class="product-title fw-bold mb-2" id="product-name">
+              Bé Mèo Ướt Át
+            </h1>
+            <div class="product-meta text-muted mb-3" style="font-size: 0.9rem">
+              Mã: <span class="fw-bold text-dark">**PVN025**</span> | Thương
+              hiệu: <span class="fw-bold text-dark">**Đang cập nhật**</span> |
+              Tình trạng: <span class="fw-bold text-success">**Còn hàng**</span>
+            </div>
+
+            <div class="product-price mb-4">
+              <span
+                class="current-price text-danger fw-bold display-6"
+                id="product-price-new"
+                >560.000đ</span
+              >
+              <span
+                class="old-price text-decoration-line-through text-muted ms-2"
+                id="product-price-old"
+                style="display: none"
+              ></span>
+            </div>
+
+            <div class="product-quantity d-flex align-items-center mb-4">
+              <span class="fw-bold me-3">Số lượng:</span>
+              <div class="input-group" style="width: 120px">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  onclick="changeQty(-1)"
+                >
+                  -
+                </button>
+                <input
+                  type="text"
+                  class="form-control text-center border-secondary"
+                  id="qty"
+                  value="1"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  onclick="changeQty(1)"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2 mb-4">
+              <button
+                class="btn btn-danger flex-grow-1 py-2 text-uppercase fw-bold"
+              >
+                Mua Ngay <br />
+                <small class="fw-normal text-white-50" style="font-size: 0.7rem"
+                  >Giao tận nơi hoặc nhận tại cửa hàng</small
+                >
+              </button>
+              <button
+                class="btn btn-warning flex-grow-1 py-2 fw-bold text-dark"
+              >
+                <i class="fas fa-cart-plus me-1"></i> Thêm vào giỏ
+              </button>
+            </div>
+
+            <div class="product-description">
+              <h5 class="text-uppercase fw-bold border-bottom pb-2 mb-2">
+                Thông tin sản phẩm
+              </h5>
+              <p
+                class="text-secondary"
+                id="product-desc"
+                style="font-size: 0.95rem; line-height: 1.6"
+              >
+                Đây là con mồm lèo
+              </p>
+            </div>
+          </div>
+
+          <!-- right coll-->
+          <div class="col-md-3">
+            <div class="policy-box border rounded-3 p-3 bg-light">
+              <h6 class="fw-bold mb-3">
+                <i class="fas fa-shield-alt me-2"></i>Chính sách hỗ trợ
+              </h6>
+
+              <div class="d-flex mb-3 align-items-start">
+                <i class="fas fa-camera text-danger fs-5 me-3 mt-1"></i>
+                <div>
+                  <span class="fw-bold d-block" style="font-size: 0.9rem"
+                    >Duyệt ảnh sản phẩm</span
+                  >
+                  <small class="text-muted"
+                    >Gửi hình ảnh sản phẩm ưng ý mới giao hàng</small
+                  >
+                </div>
+              </div>
+
+              <div class="d-flex mb-3 align-items-start">
+                <i class="fas fa-gift text-danger fs-5 me-3 mt-1"></i>
+                <div>
+                  <span class="fw-bold d-block" style="font-size: 0.9rem"
+                    >Thẻ chúc mừng miễn phí</span
+                  >
+                  <small class="text-muted"
+                    >Miễn phí thiệp và nội dung theo yêu cầu</small
+                  >
+                </div>
+              </div>
+
+              <div class="d-flex mb-3 align-items-start">
+                <i class="fas fa-flag text-danger fs-5 me-3 mt-1"></i>
+                <div>
+                  <span class="fw-bold d-block" style="font-size: 0.9rem"
+                    >Banner sản phẩm</span
+                  >
+                  <small class="text-muted">Miễn phí banner sản phẩm</small>
+                </div>
+              </div>
+
+              <div class="d-flex mb-3 align-items-start">
+                <i class="fas fa-shipping-fast text-danger fs-5 me-3 mt-1"></i>
+                <div>
+                  <span class="fw-bold d-block" style="font-size: 0.9rem"
+                    >Giao hàng trong 2H</span
+                  >
+                  <small class="text-muted"
+                    >Giao nhanh nếu sản phẩm cần gấp</small
+                  >
+                </div>
+              </div>
+
+              <button class="btn btn-outline-danger w-100 mt-2 fw-bold">
+                <i class="far fa-heart me-1"></i> Thêm vào yêu thích
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5" />
+
+        <!-- Related Products Placeholder (Optional) -->
+        <div class="mb-5">
+          <h5 class="fw-bold text-uppercase mb-3">
+            <i class="fas fa-th me-2"></i>Sản phẩm liên quan
+          </h5>
+
+          <div id="related-products" class="row g-3">
+            <p class="text-center">Đang tải sản phẩm...</p>
+          </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+          <h5 class="fw-bold text-uppercase mb-4">
+            <i class="fas fa-star me-2"></i>Đánh giá sản phẩm
+          </h5>
+
+          <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+              <div class="row align-items-center">
+                <div class="col-md-3 text-center border-end">
+                  <div
+                    class="display-4 fw-bold text-warning"
+                    id="rating-average"
+                  >
+                    4.8/5
+                  </div>
+                  <div class="text-warning mb-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                    ><i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <div class="text-muted small">(150 đánh giá)</div>
+                </div>
+                <div class="col-md-9 ps-md-5">
+                  <!-- Progress bars for ratings -->
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-muted small me-2" style="width: 30px"
+                      >5 Sao</span
+                    >
+                    <div class="progress flex-grow-1" style="height: 8px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 80%"
+                      ></div>
+                    </div>
+                    <span class="text-muted small ms-2">(120)</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-muted small me-2" style="width: 30px"
+                      >4 Sao</span
+                    >
+                    <div class="progress flex-grow-1" style="height: 8px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 15%"
+                      ></div>
+                    </div>
+                    <span class="text-muted small ms-2">(22)</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-muted small me-2" style="width: 30px"
+                      >3 Sao</span
+                    >
+                    <div class="progress flex-grow-1" style="height: 8px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 3%"
+                      ></div>
+                    </div>
+                    <span class="text-muted small ms-2">(5)</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-1">
+                    <span class="text-muted small me-2" style="width: 30px"
+                      >2 Sao</span
+                    >
+                    <div class="progress flex-grow-1" style="height: 8px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 1%"
+                      ></div>
+                    </div>
+                    <span class="text-muted small ms-2">(2)</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <span class="text-muted small me-2" style="width: 30px"
+                      >1 Sao</span
+                    >
+                    <div class="progress flex-grow-1" style="height: 8px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 1%"
+                      ></div>
+                    </div>
+                    <span class="text-muted small ms-2">(1)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h6 class="text-muted mb-3">Các nhận xét nổi bật</h6>
+
+          <div id="review-list">
+            <!-- Reviews will be loaded here -->
+            <div class="review-item card mb-3 border-0 shadow-sm"></div>
+          </div>
+
+          <div class="text-center mt-4">
+            <button class="btn btn-light border fw-bold px-4">
+              Xem tất cả đánh giá (150)
+            </button>
+          </div>
+
+          <!-- Review Form (Optional - for editing/adding) -->
+          <div class="mt-5 p-4 bg-light rounded-3 border">
+            <h6 class="fw-bold mb-3">Viết đánh giá của bạn</h6>
+            <form id="review-form">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="review-name"
+                  placeholder="Tên của bạn"
+                />
+              </div>
+              <div class="mb-3">
+                <select class="form-select" id="review-stars">
+                  <option value="5">5 Sao (Tuyệt vời)</option>
+                  <option value="4">4 Sao (Tốt)</option>
+                  <option value="3">3 Sao (Bình thường)</option>
+                  <option value="2">2 Sao (Tệ)</option>
+                  <option value="1">1 Sao (Rất tệ)</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  id="review-text"
+                  rows="3"
+                  placeholder="Chia sẻ cảm nhận của bạn về sản phẩm..."
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                id="btn-submit-review"
+                class="btn btn-primary"
+              >
+                Gửi đánh giá
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- PHẦN FOOTER NÀY NHỮNG TRANG NÀO LẤY GIAO DIỆN TỪ INDEX THÌ ĐỀU PHAỈ GIỮ LẠI -->
+      <footer
+        class="mt-5 pt-5 pb-3 bg-light"
+        style="border-top: solid 5px #d81b60"
+      >
+        <div class="container px-4">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              <img
+                src="../assets/img/logo.jpg"
+                width="140"
+                alt="Sweet Cravings Logo"
+                class="rounded-circle"
+              />
+            </div>
+            <div class="col-md-8">
+              <div
+                class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-end gap-3"
+              >
+                <h5 class="m-0 fw-bold" style="color: #d81b60">
+                  ĐĂNG KÝ NHẬN TIN
+                </h5>
+                <div class="input-group" style="max-width: 350px">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Nhập email của bạn"
+                  />
+                  <button class="btn btn-danger text-light">Đăng ký</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row pt-3">
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">VỀ CHÚNG TÔI</h6>
+              <p class="small text-muted">
+                Đây là sốp bánh kẹo trá hình có đầu tư lớn
+              </p>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              2
+              <h6 class="fw-bold mb-3" style="color: #d81b60">
+                LIÊN KẾT NHANH
+              </h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a href="about.html" class="text-decoration-none text-muted"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                    >Sản phẩm</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="info-customer.html"
+                    class="text-decoration-none text-muted"
+                    >Chăm sóc khách hàng</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="sidemap.html" class="text-decoration-none text-muted"
+                    >Sơ đồ Website (Sitemap)</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">DANH MỤC</h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                    >Socola Nghệ Thuật</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                    >Bánh Ngọt & Cupcake</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a href="news.html" class="text-decoration-none text-muted"
+                    >Tin tức & Blog</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <a
+                    href="products.html"
+                    class="text-decoration-none text-muted"
+                    >Flash Sale Đồ Ngọt</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 small text-muted">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">LIÊN HỆ</h6>
+              <p class="mb-2">
+                📍 số 12 Nguyễn Văn Bảo,Phường Hạnh Thông, quận Gò Vấp, TP.HCM
+              </p>
+              <p class="mb-2">📞 0123 456 JQK - 0987 654 KQJ</p>
+              <p class="mb-2">✉️ jqk.iuh.edu.vn</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="text-center small text-muted pt-2">
+            <p class="mb-0">Copyright © 2026 Spark. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
