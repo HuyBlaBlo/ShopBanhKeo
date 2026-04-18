@@ -1,0 +1,104 @@
+.TinTuc {
+    color: #d81b60; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card {
+    border: 1px solid #fce4ec !important; 
+    border-radius: 12px !important; 
+    transition: all 0.3s ease; 
+    height: auto; 
+    min-height: 180px; 
+    background-color: #fefefe;
+    overflow: hidden;
+}
+.card:hover {
+    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.1); 
+    border-color: #d81b60 !important; 
+    transform: translateY(-5px); 
+}
+.card h6 {
+    font-size: 13px;
+    color: #d81b60; 
+    background: #fce4ec; 
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.card-news-link h4 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333; 
+    transition: color 0.2s;
+    margin-bottom: 10px;
+}
+.card-news-link:hover h4 {
+    color: #d81b60 !important; 
+}
+.card-news-link {
+    display: block;
+    overflow: hidden; 
+    border-radius: 8px; 
+}
+.card-news-link img {
+    transition: transform 0.5s ease, filter 0.3s ease; 
+    display: block;
+    width: 100%;
+}
+.card:hover .card-news-link img {
+    transform: scale(1.1);
+    filter: brightness(1.1); 
+}
+section h3 {
+    font-size: 40px;
+}
+.accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 10px !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fce4ec !important; 
+    color: #d81b60 !important;
+    box-shadow: none;
+}
+.accordion-button::after {
+    filter: invert(21%) sepia(91%) saturate(2815%) hue-rotate(326deg) brightness(91%) contrast(97%);
+}
+.accordion-button:hover {
+    background-color: #fff5f8;
+    color: #d81b60;
+}
+.tag-cloud a {
+    transition: all 0.3s ease;
+    border-color: #d81b60 !important;
+    color: #d81b60 !important;
+}
+
+.tag-cloud a:hover {
+    background-color: #d81b60 !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+.accordion-body ul li a {
+    transition: all 0.3s ease; 
+    display: block; 
+    color: #212529; 
+    text-decoration: none;
+}
+
+.accordion-body ul li a:hover {
+    color: #d81b60 !important; 
+    padding-left: 8px; 
+    background-color: #fff5f8; 
+}
+
+.accordion-body a p {
+    transition: color 0.3s ease;
+}
+
+.accordion-body a:hover p {
+    color: #d81b60 !important;
+}
