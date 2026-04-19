@@ -161,7 +161,6 @@ header .text-danger:hover {
 section .card_sp{
   margin-bottom: 5px;
 }
-
 section .hinh_sp{
   overflow: hidden;
   border-radius: 10px;
@@ -181,17 +180,11 @@ section .hinh_sp img{
 section .hinh_sp:hover img{
   transform: scale(1.08);
 }
-
-/* section #socola, #cake{
-  overflow-y: visible;
-} */
-
 section .khung_card{
   background-color: #f3d3df;
 }
-section .khung_card .nd{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 50px;
+section .khung_card h5{
+  min-height: 80px;
 }
 section .khung_card .dat{
   width: 100%;
