@@ -297,3 +297,29 @@ section .khung_card .dat:hover{
   border-color: #ff4d8d;
   transform: scale(1.05);
 }
+/* ===== ABOUT BOX ===== */
+.about-page .about-box {
+  background: white;
+  border-radius: 18px;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(255, 77, 141, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .about-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(255, 77, 141, 0.25);
+}
+
+/* icon */
+.about-page .about-icon {
+  font-size: 30px;
+  background: linear-gradient(135deg, #ff4d8d, #ff80ab);
+  color: white;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  border-radius: 50%;
+}
