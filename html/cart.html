@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="vn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng - Sweet Cravings</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="container shadow-sm bg-white p-0">
+      
+      <header class="py-3 border-bottom">
+        <div class="container d-flex align-items-center justify-content-between gap-3 flex-wrap">
+          <div class="logo">
+            <img src="../assets/img/logo.jpg" alt="Logo" class="img-fluid rounded-circle" width="100" />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="about.html">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="members-ship.html">Membership</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle px-3" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li><a class="dropdown-item" href="products.html#socola">Socola các loại</a></li>
+                    <li><a class="dropdown-item" href="products.html#cake">Bánh ngọt & Capcake</a></li>
+                    <li><a class="dropdown-item" href="products.html#keo">Kẹo dẻo & Marshmallow</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="news.html">Thông báo mới</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <a class="text-danger position-relative text-decoration-none" href="cart.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+              </svg>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem">0</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="container mt-4 mb-5 px-4">
+        <h3 class="fw-bold mb-4" style="color: #d81b60">GIỎ HÀNG CỦA BẠN</h3>
+        
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm rounded-3">
+              <div class="card-body p-0">
+                <div class="d-none d-md-flex text-muted small bg-light p-3 fw-bold border-bottom">
+                  <div class="col-5">SẢN PHẨM</div>
+                  <div class="col-2 text-center">ĐƠN GIÁ</div>
+                  <div class="col-3 text-center">SỐ LƯỢNG</div>
+                  <div class="col-2 text-end">SỐ TIỀN</div>
+                </div>
+
+                <div id="cart-items-container">
+                  </div>
+
+              </div>
+            </div>
+            
+            <div class="mt-3">
+              <a href="products.html" class="text-decoration-none" style="color: #d81b60;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                </svg> Tiếp tục mua sắm
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm rounded-3 p-4">
+              <h5 class="fw-bold border-bottom pb-3 mb-3">TÓM TẮT ĐƠN HÀNG</h5>
+              
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Tổng tiền hàng</span>
+                <span id="subtotal" class="fw-medium">0đ</span>
+              </div>
+              <div class="d-flex justify-content-between mb-3 border-bottom pb-3">
+                <span class="text-muted">Phí vận chuyển</span>
+                <span class="text-muted fst-italic small">Chưa tính</span>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-muted">MÃ GIẢM GIÁ / VOUCHER</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Nhập mã...">
+                  <button class="btn btn-outline-danger" type="button">Áp dụng</button>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <span class="fw-bold">TỔNG CỘNG</span>
+                <span id="total" class="fs-4 fw-bold text-danger">0đ</span>
+              </div>
+
+              <a href="pay.html" class="btn w-100 fw-bold text-white py-2 shadow-sm text-uppercase" style="background-color: #d81b60;">
+                Tiến Hành Thanh Toán
+              </a>
+              
+              <div class="text-center mt-3 small text-muted">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="text-success">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.017 1.052L7.88 12.414a.75.75 0 1 1-1.060-1.06l3.646-3.647-1.06-1.06a1.05 1.05 0 0 1 1.493-1.48l2.737 2.763z"/>
+                </svg> Thanh toán an toàn và bảo mật
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-5 pt-5 pb-3 bg-light" style="border-top: solid 5px #d81b60">
+        <div class="container px-4">
+          <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              <img src="../assets/img/logo.jpg" width="140" alt="Sweet Cravings Logo" class="rounded-circle" />
+            </div>
+            <div class="col-md-8">
+              <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-end gap-3">
+                <h5 class="m-0 fw-bold" style="color: #d81b60">ĐĂNG KÝ NHẬN TIN</h5>
+                <div class="input-group" style="max-width: 350px">
+                  <input type="email" class="form-control" placeholder="Nhập email của bạn" />
+                  <button class="btn btn-danger text-light">Đăng ký</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row pt-3">
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">VỀ CHÚNG TÔI</h6>
+              <p class="small text-muted">Shop bánh kẹo trá hình với đầu tư lớn, mang đến những sản phẩm chất lượng cao.</p>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">LIÊN KẾT NHANH</h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2"><a href="about.html" class="text-decoration-none text-muted">Về chúng tôi</a></li>
+                <li class="mb-2"><a href="products.html" class="text-decoration-none text-muted">Sản phẩm</a></li>
+                <li class="mb-2"><a href="info-customer.html" class="text-decoration-none text-muted">Chăm sóc khách hàng</a></li>
+                <li class="mb-2"><a href="sitemap.html" class="text-decoration-none text-muted">Sơ đồ Website</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">DANH MỤC</h6>
+              <ul class="list-unstyled small custom-link-list">
+                <li class="mb-2"><a href="products.html#socola" class="text-decoration-none text-muted">Socola Nghệ Thuật</a></li>
+                <li class="mb-2"><a href="products.html#cake" class="text-decoration-none text-muted">Bánh Ngọt & Cupcake</a></li>
+                <li class="mb-2"><a href="news.html" class="text-decoration-none text-muted">Tin tức & Blog</a></li>
+                <li class="mb-2"><a href="products.html#keo" class="text-decoration-none text-muted">Kẹo Dẻo & Marshmallow</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-3 mb-4 small text-muted">
+              <h6 class="fw-bold mb-3" style="color: #d81b60">LIÊN HỆ</h6>
+              <p class="mb-2">📍 số 12 Nguyễn Văn Bảo, Phường Hạnh Thông, quận Gò Vấp, TP.HCM</p>
+              <p class="mb-2">📞 0123 456 JQK - 0987 654 KQJ</p>
+              <p class="mb-2">✉️ jqk.iuh.edu.vn</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="text-center small text-muted pt-2">
+            <p class="mb-0">Copyright © 2026 Sweet Cravings. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // 1. Biến mảng lưu trữ giỏ hàng
+      let cart = [];
+
+      // 2. Hàm khởi chạy khi load trang
+      window.onload = function() {
+        let savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+          cart = JSON.parse(savedCart);
+        }
+        renderCart();
+      };
+
+      // 3. Hàm vẽ lại toàn bộ giao diện giỏ hàng
+      function renderCart() {
+        let container = document.getElementById('cart-items-container');
+        let subtotalEl = document.getElementById('subtotal');
+        let totalEl = document.getElementById('total');
+        let countEl = document.getElementById('cart-count');
+
+        // Nếu giỏ hàng trống
+        if (cart.length === 0) {
+          container.innerHTML = '<div class="p-4 text-center text-muted">Giỏ hàng của bạn đang trống</div>';
+          subtotalEl.innerText = '0đ';
+          totalEl.innerText = '0đ';
+          countEl.innerText = '0';
+          return;
+        }
+
+        let html = '';
+        let totalPrice = 0;
+        let totalItems = 0;
+
+        // Vòng lặp in từng sản phẩm
+        for (let i = 0; i < cart.length; i++) {
+          let item = cart[i];
+          let itemTotal = item.price * item.quantity;
+          
+          totalPrice += itemTotal;
+          totalItems += item.quantity;
+
+          html += `
+            <div class="d-flex flex-column flex-md-row align-items-center p-3 border-bottom position-relative">
+              <button class="btn btn-link text-danger p-0 position-absolute top-0 end-0 mt-3 me-3 d-md-none" onclick="removeItem(${i})">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </button>
+              
+              <div class="col-12 col-md-5 d-flex align-items-center mb-3 mb-md-0">
+                <img src="${item.image}" alt="${item.name}" class="img-fluid rounded border" style="width: 80px; height: 80px; object-fit: cover;">
+                <div class="ms-3">
+                  <a href="product-detail.html?id=${item.id}" class="text-decoration-none text-dark fw-bold mb-1 d-block">${item.name}</a>
+                  <small class="text-muted">${item.variant || 'Mặc định'}</small>
+                </div>
+              </div>
+              
+              <div class="col-12 col-md-2 text-md-center mb-2 mb-md-0 fw-medium">
+                <span class="d-md-none text-muted small">Đơn giá: </span>${item.price.toLocaleString('vi-VN')}đ
+              </div>
+              
+              <div class="col-12 col-md-3 d-flex justify-content-md-center mb-2 mb-md-0">
+                <span class="d-md-none text-muted small me-2 align-self-center">Số lượng: </span>
+                <div class="input-group input-group-sm" style="width: 110px">
+                  <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(${i}, -1)">−</button>
+                  <input type="text" class="form-control text-center border-secondary" value="${item.quantity}" readonly />
+                  <button class="btn btn-outline-secondary" type="button" onclick="changeQuantity(${i}, 1)">+</button>
+                </div>
+              </div>
+              
+              <div class="col-12 col-md-2 text-md-end text-danger fw-bold">
+                <span class="d-md-none text-muted small fw-normal">Thành tiền: </span>${itemTotal.toLocaleString('vi-VN')}đ
+                <button class="btn btn-link text-muted p-0 ms-2 d-none d-md-inline" type="button" onclick="removeItem(${i})">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 1a.5.5 0 0 0-.5.5v1h6V1.5a.5.5 0 0 0-.5-.5h-5z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          `;
+        }
+
+        // Cập nhật HTML và các con số
+        container.innerHTML = html;
+        subtotalEl.innerText = totalPrice.toLocaleString('vi-VN') + 'đ';
+        totalEl.innerText = totalPrice.toLocaleString('vi-VN') + 'đ';
+        countEl.innerText = totalItems;
+      }
+
+      // 4. Hàm thay đổi số lượng (+ / -)
+      function changeQuantity(index, change) {
+        let newQuantity = cart[index].quantity + change;
+        
+        // Không cho phép số lượng nhỏ hơn 1
+        if (newQuantity >= 1) {
+          cart[index].quantity = newQuantity;
+          saveCart(); // Lưu thay đổi vào bộ nhớ
+          renderCart(); // Vẽ lại giao diện
+        }
+      }
+
+      // 5. Hàm xóa 1 sản phẩm khỏi mảng
+      function removeItem(index) {
+        // Cắt bỏ 1 phần tử tại vị trí index
+        cart.splice(index, 1);
+        saveCart();
+        renderCart();
+      }
+
+      // 6. Hàm lưu giỏ hàng vào HTML5 LocalStorage
+      function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+
+    </script>
+  </body>
+</html>

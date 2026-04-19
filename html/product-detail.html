@@ -633,5 +633,158 @@
         </div>
       </footer>
     </div>
+        </div>
+    
+    <script>
+      // Dữ liệu sản phẩm (bạn có thể lấy từ API hoặc database sau)
+      const products = {
+        'socola-1': {
+          id: 'socola-1',
+          name: 'Socola Đen Nguyên Chất 85% Cacao',
+          price: 189000,
+          image: '../assets/img/Socola1.jpg',
+          oldPrice: 220000,
+          desc: 'Socola đen nguyên chất với hàm lượng cacao 85%, được nhập khẩu từ Bỉ. Vị đắng nhẹ, thích hợp cho những người yêu thích socola nguyên chất.',
+          sku: 'PVN001'
+        },
+        'socola-2': {
+          id: 'socola-2',
+          name: 'Socola Trắng Hạnh Nhân',
+          price: 165000,
+          image: '../assets/img/Socola2.jpg',
+          oldPrice: 0,
+          desc: 'Socola trắng kết hợp với hạnh nhân tươi ngon. Vị ngọt dịu, thích hợp làm quà tặng.',
+          sku: 'PVN002'
+        },
+        'cake-1': {
+          id: 'cake-1',
+          name: 'Bánh Red Velvet Hoa Hồng',
+          price: 350000,
+          image: '../assets/img/cake1.jpg',
+          oldPrice: 400000,
+          desc: 'Bánh Red Velvet trang trí hoa hồng tươi, mềm xốp và ngon miệng. Lý tưởng cho các dịp lễ kỷ niệm.',
+          sku: 'PVN003'
+        }
+      };
+
+      // Lấy productId từ URL hoặc localStorage
+      function getProductId() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id') || localStorage.getItem('selectedProductId') || 'socola-1';
+      }
+
+      // Hiển thị chi tiết sản phẩm
+      function loadProductDetail() {
+        const productId = getProductId();
+        const product = products[productId];
+
+        if (!product) {
+          console.warn('Sản phẩm không tìm thấy');
+          return;
+        }
+
+        // Cập nhật hình ảnh
+        document.getElementById('product-img').src = product.image;
+        document.getElementById('product-img').alt = product.name;
+
+        // Cập nhật thông tin cơ bản
+        document.getElementById('product-name').textContent = product.name;
+        document.getElementById('product-price-new').textContent = product.price.toLocaleString('vi-VN') + 'đ';
+        document.getElementById('product-desc').textContent = product.desc;
+        document.querySelector('.product-meta span.fw-bold').textContent = product.sku;
+
+        // Hiển thị giá cũ nếu có
+        if (product.oldPrice > 0) {
+          document.getElementById('product-price-old').textContent = product.oldPrice.toLocaleString('vi-VN') + 'đ';
+          document.getElementById('product-price-old').style.display = 'inline';
+        }
+
+        // Lưu productId cho sử dụng sau
+        window.currentProduct = product;
+      }
+
+      // Thay đổi số lượng
+      function changeQty(delta) {
+        const qtyInput = document.getElementById('qty');
+        let currentQty = parseInt(qtyInput.value) || 1;
+        currentQty = Math.max(1, currentQty + delta);
+        qtyInput.value = currentQty;
+      }
+
+      // Nút "Thêm vào giỏ"
+      document.querySelectorAll('.btn-warning').forEach(btn => {
+        if (btn.textContent.includes('Thêm vào giỏ')) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            addProductToCart();
+          });
+        }
+      });
+
+      // Nút "Mua Ngay"
+      document.querySelectorAll('.btn-danger').forEach(btn => {
+        if (btn.textContent.includes('Mua Ngay')) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            addProductToCart();
+            window.location.href = 'cart.html';
+          });
+        }
+      });
+
+      // Hàm thêm sản phẩm vào giỏ hàng
+      function addProductToCart() {
+        const product = window.currentProduct;
+        const qty = parseInt(document.getElementById('qty').value) || 1;
+
+        if (!product) {
+          alert('Không thể tìm thấy sản phẩm!');
+          return;
+        }
+
+        // Lấy giỏ hàng từ localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Kiểm tra sản phẩm đã có trong giỏ chưa
+        const existingItem = cart.find(item => item.id === product.id);
+
+        if (existingItem) {
+          existingItem.quantity += qty;
+        } else {
+          cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            variant: '',
+            quantity: qty
+          });
+        }
+
+        // Lưu giỏ hàng
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Cập nhật badge
+        updateCartBadge();
+
+        // Hiển thị thông báo
+        alert(`Đã thêm "${product.name}" vào giỏ hàng!`);
+      }
+
+      // Cập nhật badge giỏ hàng
+      function updateCartBadge() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById('cart-count').textContent = totalQty;
+      }
+
+      // Load dữ liệu khi trang tải
+      document.addEventListener('DOMContentLoaded', function() {
+        loadProductDetail();
+        updateCartBadge();
+      });
+    </script>
+  </body>
+</html>
   </body>
 </html>
