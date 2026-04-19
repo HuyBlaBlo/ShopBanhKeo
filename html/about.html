@@ -12,8 +12,178 @@
   <body class="bg-light">
     <div class="container shadow-sm bg-white p-0">
 
-      <!-- HEADER GIỮ NGUYÊN như index -->
-      <!-- (bạn copy nguyên header từ index qua đây) -->
+      <header class="py-3 border-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3 flex-wrap"
+        >
+          <div class="logo">
+            <img
+              src="../assets/img/logo.jpg"
+              alt="Logo"
+              class="img-fluid rounded-circle"
+              width="100"
+            />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="about.html">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="members-ship.html"
+                    >Membership</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html#socola"
+                        >Socola các loại</a
+                      >
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="products.html#cake"
+                        >Bánh ngọt & Capcake</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html#keo"
+                        >Kẹo dẻo & Marshmallow</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-2"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Quà tặng</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Hộp quà Socola</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Giỏ quà Bánh kẹo</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Đang giảm giá</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="news.html">Thông báo mới</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <form id="searchForm" class="d-none d-md-block">
+              <div class="input-group">
+                <input
+                  id="search-inp"
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tìm bánh, kẹo, socola..."
+                />
+                <button class="btn btn-danger btn-sm" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <div class="dropdown">
+              <a
+                class="text-danger dropdown-toggle text-decoration-none"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.832 1.664C2.154 12.333 2.001 13.078 2 13.324z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                <li>
+                  <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+
+            <!--  GIỎ HÀNG -->
+            <a
+              class="text-danger position-relative text-decoration-none"
+              href="cart.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.65rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </header>
 
       <!-- ===== ABOUT ===== -->
       <section class="container py-5">
