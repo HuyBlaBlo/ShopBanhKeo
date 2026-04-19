@@ -210,3 +210,18 @@ section .khung_card .dat:hover{
   color: yellow;
   background : linear-gradient(to right, #cb0530,#df4b7a, #cb0530);
 }
+/* ABOUT */
+.team-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid #d81b60;
+  box-shadow: 0 0.5rem 1rem rgba(216, 27, 96, 0.2);
+}
+
+.team-card img {
+  border: 3px solid #f8bbd0;
+}
