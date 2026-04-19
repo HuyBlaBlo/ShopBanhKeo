@@ -150,3 +150,70 @@ header .text-danger:hover {
   box-shadow: none;
   /* border-color: #f3d3df; */
 }
+/* =========================================================================== */
+/* PRODUCTS */
+#title_product{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  color: #c2185b;
+  background-color: #f3d3df;
+}
+section .card_sp{
+  margin-bottom: 5px;
+}
+
+section .hinh_sp{
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+section .hinh_sp:hover{
+  transform: translateY(-10px);
+  outline: 2px solid #c2185b;
+  outline-offset: 10px;
+}
+section .hinh_sp img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+section .hinh_sp:hover img{
+  transform: scale(1.08);
+}
+
+/* section #socola, #cake{
+  overflow-y: visible;
+} */
+
+section .khung_card{
+  background-color: #f3d3df;
+}
+section .khung_card .nd{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 50px;
+}
+section .khung_card .dat{
+  width: 100%;
+  height: 35px;
+  margin-top: 8px;
+  color: #f3d3df;
+  border-radius: 5px;
+  background : linear-gradient(to right, #c60d4a,#e13b7d, #c60d4a);
+}
+section .khung_card .them{
+  width: 100%;
+  height: 35px;
+  margin-top: 8px;
+  color: #efc8d6;
+  border-radius: 5px;
+  background : linear-gradient(to right, #c60d4a,#e13b7d, #c60d4a);
+}
+section .khung_card .them:hover{
+  color: yellow;
+  background : linear-gradient(to right, #ec4289,#e177a3, #ec4289);
+}
+section .khung_card .dat:hover{
+  color: yellow;
+  background : linear-gradient(to right, #cb0530,#df4b7a, #cb0530);
+}

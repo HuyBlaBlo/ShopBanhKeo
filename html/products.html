@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="vn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế Giới Đồ Ngọt Sweet Cravings</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <div class="container shadow-sm bg-white p-0">
+      <header class="py-3 border-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3 flex-wrap"
+        >
+          <div class="logo">
+            <img
+              src="../assets/img/logo.jpg"
+              alt="Logo"
+              class="img-fluid rounded-circle"
+              width="100"
+            />
+          </div>
+
+          <nav class="navbar navbar-expand-lg p-0">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-medium">
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="about.html">Về chúng tôi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="members-ship.html"
+                    >Membership</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-3"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Socola các loại</a
+                      >
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Bánh ngọt & Capcake</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Kẹo dẻo & Marshmallow</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle px-2"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    >Quà tặng</a
+                  >
+                  <ul class="dropdown-menu shadow-sm border-0">
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Hộp quà Socola</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="products.html"
+                        >Giỏ quà Bánh kẹo</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="index.html">Đang giảm giá</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link px-2" href="news.html">Thông báo mới</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="d-flex align-items-center gap-3">
+            <form id="searchForm" class="d-none d-md-block">
+              <div class="input-group">
+                <input
+                  id="search-inp"
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tìm bánh, kẹo, socola..."
+                />
+                <button class="btn btn-danger btn-sm" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
+            <div class="dropdown">
+              <a
+                class="text-danger dropdown-toggle text-decoration-none"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.832 1.664C2.154 12.333 2.001 13.078 2 13.324z"
+                  />
+                </svg>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0">
+                <li>
+                  <a class="dropdown-item" href="login.html">Đăng nhập</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="register.html">Đăng ký</a>
+                </li>
+              </ul>
+            </div>
+
+            <!--  GIỎ HÀNG -->
+            <a
+              class="text-danger position-relative text-decoration-none"
+              href="cart.html"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                />
+              </svg>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.65rem"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </header>
+      <!---------------------------------------------PRODUCT---------------------------------------------->
+        <section>
+          <!--DONG 1 : SOCOLA-->
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1 id="title_product">SOCOLA</h1>
+            </div>
+          </div>
+          <!--DONG 2-->
+          <div id="socola" class="row pt-4 flex-nowrap overflow-auto">
+            <!--CARD 1-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola1.jpg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Socola Đen Nguyên Chất 85% Cacao</h5>
+                    <p class="text-danger fs-5">Giá: 189,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola2.jpg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Nama Chocolate Cao Cấp Nhật Bản</h5>
+                    <p class="text-danger fs-5">Giá: 259,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" id="dat" type="button">Đặt hàng</button>
+                  <button class="them border border-0" id="them" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 3-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola3.jpg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Socola Truffle Thượng Hạng</h5>
+                    <p class="text-danger fs-5">Giá: 299,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 4-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola4.png" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Hộp Socola Tình Yêu Sweet Love</h5>
+                    <p class="text-danger fs-5">Giá: 349,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 5-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola5.jpg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Set Quà Socola Valentine Luxury</h5>
+                    <p class="text-danger fs-5">Giá: 459,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 6-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola6.jpeg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Hộp Socola Ngọt Ngào Cute Box</h5>
+                    <p class="text-danger fs-5">Giá: 319,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 7-->
+            <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/Socola7.jpg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Khay Socola Mix Vị Premium</h5>
+                    <p class="text-danger fs-5">Giá: 389,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--DONG 3 : CAKE-->
+          <div class="row mt-4">
+            <div class="col-12 text-center">
+              <h1 id="title_product">BÁNH & CUPCAKE</h1>
+            </div>
+          </div>
+          <!--DONG 4-->
+            <div id="cake" class="row pt-4 flex-nowrap overflow-auto">
+              <!--CARD 2.1-->
+              <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake1.jpg" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Set Cupcake Hoa Kem Pastel</h5>
+                    <p class="text-danger fs-5">Giá: 329,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.2-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake2.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Set Cupcake Sweet Bow</h5>
+                    <p class="text-danger fs-5">Giá: 299,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.3-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake3.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Cupcake Trái Cây Tươi Mix</h5>
+                    <p class="text-danger fs-5">Giá: 279,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+            <!--CARD 2.4-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake4.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Cupcake Party Colorful</h5>
+                    <p class="text-danger fs-5">Giá: 259,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.5-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake5.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Cupcake Matcha Nhật Bản</h5>
+                    <p class="text-danger fs-5">Giá: 289,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.6-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake6.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Bánh Kem Socola Trái Cây Luxury</h5>
+                    <p class="text-danger fs-5">Giá: 399,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.7-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake7.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Bánh Kem Bắp Ngọt Dịu</h5>
+                    <p class="text-danger fs-5">Giá: 349,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.8-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake8.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Set Bánh Quy Handmade</h5>
+                    <p class="text-danger fs-5">Giá: 219,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+            <!--CARD 2.9-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/cake9.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Bánh Tiramisu Classic Ý</h5>
+                    <p class="text-danger fs-5">Giá: 359,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--DONG 5: KEO-->
+          <div id="keo" class="row mt-4">
+            <div class="col-12 text-center">
+              <h1 id="title_product">KẸO DẺO & MARSHMALLOW</h1>
+            </div>
+          </div>
+          <!--DONG 6-->
+          <div id="keo" class="row pt-4 flex-nowrap overflow-auto">
+              <!--CARD 3.1-->
+              <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo1.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Marshmallow Classic Dâu Sữa</h5>
+                    <p class="text-danger fs-5">Giá: 89,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+          <!--CARD 3.2-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo2.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Marshmallow Mix Vị Trái Cây</h5>
+                    <p class="text-danger fs-5">Giá: 119,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+          <!--CARD 3.3-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo3.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Mini Marshmallow Rainbow</h5>
+                    <p class="text-danger fs-5">Giá: 79,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          <!--CARD 3.4-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo4.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Marshmallow Pastel Sweet Cube</h5>
+                    <p class="text-danger fs-5">Giá: 109,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+          <!--CARD 3.5-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo5.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Marshmallow Vanilla Berry</h5>
+                    <p class="text-danger fs-5">Giá: 129,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+          <!--CARD 3.6-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo6.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Kẹo Dẻo Trái Cây Sugar Jelly</h5>
+                    <p class="text-danger fs-5">Giá: 99,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+
+          <!--CARD 3.7-->
+            <div class="col-6 col-md-4 col-lg-3 mb-5">
+              <div class="hinh_sp card m-2 h-100 d-flex flex-column" onclick="goDetail()">
+                <img class="card-img-top" src="../assets/img/keo7.webp" alt="">
+                <div id="khung_card" class="khung_card card-body">
+                  <div class="nd text-center">
+                    <h5>Kẹo Dẻo Xoài Mini</h5>
+                    <p class="text-danger fs-5">Giá: 89,000 VNĐ</p>
+                  </div>
+                  <button class="dat border border-0" type="button">Đặt hàng</button>
+                  <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+    <script>
+      function goDetail() {
+        window.location.href = "product-detail.html";
+      }
+    </script>
+  </body>
+</html>
