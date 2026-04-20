@@ -158,6 +158,12 @@ header .text-danger:hover {
   color: #c2185b;
   background-color: #f3d3df;
 }
+#title_qua {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bolder;
+  color: #f0d5df;
+  background-color: #c2185b;
+}
 section .card_sp {
   margin-bottom: 5px;
 }
