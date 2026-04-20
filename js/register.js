@@ -18,6 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  document.getElementById("username").addEventListener("blur", kiemTraUsername);
+  document.getElementById("password").addEventListener("blur", kiemTraPassword);
+  document.getElementById("repassword").addEventListener("blur", kiemTraRePassword);
+  document.getElementById("ho").addEventListener("blur", kiemTraHo);
+  document.getElementById("ten").addEventListener("blur", kiemTraTen);
+  document.getElementById("ngaysinh").addEventListener("blur", kiemTraNgaySinh);
+  document.getElementById("diachi").addEventListener("blur", kiemTraDiaChi);
+  document.getElementById("sdt").addEventListener("blur", kiemTraSDT);
+  document.getElementById("email").addEventListener("blur", kiemTraEmail);
 });
 
 
@@ -38,7 +47,7 @@ function kiemTraUsername() {
 function kiemTraPassword() {
   let p = document.getElementById("password").value.trim();
   let regex = /^(?=.*[A-Z])(?=.*[^A-Za-z0-9])\S{12,}$/;
-
+  
   document.getElementById("errPassword").innerHTML =
     regex.test(p)
       ? "<span class='text-success'>OK</span>"
@@ -110,7 +119,7 @@ function kiemTraNgaySinh() {
 //KIEM TRA GIOI TINH
 function kiemTraGender() {
   let checked = document.querySelector('input[name="gender"]:checked');
-
+  
   document.getElementById("errGender").innerHTML =
     checked
       ? "<span class='text-success'>OK</span>"

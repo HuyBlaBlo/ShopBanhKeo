@@ -18,7 +18,43 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      alert("Cảm ơn bạn! Đơn hàng đã được đặt thành công.");
+      //LẤY PHƯƠNG THỨC THANH TOÁN
+      let paymentMethod = document.querySelector(
+        'input[name="payment"]:checked'
+      ).value;
+
+      // NẾU CHUYỂN KHOẢN → HIỆN QR
+      if (paymentMethod == "bank") {
+        const qrModal = new bootstrap.Modal(
+          document.getElementById("qrModal")
+        );
+        qrModal.show();
+        return; //dừng lại, chưa đặt hàng
+      }
+
+      //COD
+      xuLyDatHangThanhCong();
+    });
+  }
+
+      //sự kiện nút "ĐÃ THANH TOÁN"
+      let btnPaid = document.getElementById("btn-paid");
+
+      if (btnPaid) {
+        btnPaid.addEventListener("click", function () {
+          // đóng modal trước
+          const modalEl = document.getElementById("qrModal");
+          const modal = bootstrap.Modal.getInstance(modalEl);
+          modal.hide();
+
+      // xử lý đơn hàng
+      xuLyDatHangThanhCong();
+    });
+}
+});
+
+function xuLyDatHangThanhCong() {
+  alert("Cảm ơn bạn! Đơn hàng đã được đặt thành công.");
       localStorage.removeItem("cart"); // Xóa giỏ hàng sau khi mua xong
 
       // reset số luowgnj trên icon giỏ hàng về 0
@@ -28,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Đẩy người dùng về trang chủ
       window.location.href = "index.html";
-    });
-  }
-});
+}
 
 // 2. HÀM HIỂN THỊ HÓA ĐƠN VÀ TÍNH TIỀN
 function hienThiHoaDon() {

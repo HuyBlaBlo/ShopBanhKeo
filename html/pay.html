@@ -61,12 +61,12 @@
 
       <div class="d-flex justify-content-between align-items-center mb-2">
         <span>💳 Chuyển khoản</span>
-        <input type="radio" name="payment" checked />
+        <input type="radio" name="payment" value="bank" checked />
       </div>
 
       <div class="d-flex justify-content-between align-items-center">
         <span>💵 Thanh toán khi nhận hàng</span>
-        <input type="radio" name="payment" />
+        <input type="radio" name="payment" value="cod" />
       </div>
     </div>
 
@@ -240,6 +240,25 @@
             </button>
             <button class="btn btn-main">Áp dụng</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL THANH TOAN CHUYEN KHOAN-->
+    <div class="modal fade" id="qrModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-3">
+          <h5>Quét mã QR để thanh toán</h5>
+          <img src="../assets/img/qrcode-demo.jpg" class="d-block mx-auto" style="width:200px" />
+          
+          <button class="btn btn-secondary mt-3" data-bs-dismiss="modal">
+            Đóng
+          </button>
+
+          <button id="btn-paid" class="btn btn-success mt-3">
+          Đã thanh toán
+          </button>
+
         </div>
       </div>
     </div>
