@@ -18,13 +18,15 @@
       <div class="login-title">Đăng nhập</div>
       <div class="login-sub">Nhập email và mật khẩu của bạn</div>
 
-      <form>
+      <form id="loginForm">
         <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Email" />
+          <input type="email" id="email" class="form-control" placeholder="Email" />
+          <small class="text-danger" id="emailError">*</small>
         </div>
 
         <div class="mb-3">
-          <input type="password" class="form-control" placeholder="Mật khẩu" />
+          <input type="password" id="password" class="form-control" placeholder="Mật khẩu" />
+          <small class="text-danger" id="passwordError">*</small>
         </div>
 
         <button type="submit" class="btn btn-login w-100">Đăng nhập</button>
@@ -37,11 +39,11 @@
       <div class="login-divider">Hoặc đăng nhập bằng</div>
 
       <div class="d-grid gap-2">
-        <button class="btn btn-danger w-75 mx-auto">
+        <button id="btnGoogle" class="btn btn-danger w-75 mx-auto">
           <i class="bi bi-google"></i> Đăng nhập Google
         </button>
 
-        <button class="btn btn-primary w-75 mx-auto">
+        <button id="btnFacebook" class="btn btn-primary w-75 mx-auto">
           <i class="bi bi-facebook"></i> Đăng nhập Facebook
         </button>
       </div>
@@ -51,5 +53,8 @@
         <a href="register.html">Tạo tài khoản</a>
       </div>
     </div>
+
+    <!-- js -->
+    <script src="../js/login.js"></script>
   </body>
 </html>
