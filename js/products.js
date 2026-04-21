@@ -17,7 +17,7 @@ function createProductCard(id, product) {
     `;
 }
 
-// àm vẽ sản phẩm lên màn hình dựa trên loại
+// hàm vẽ sản phẩm lên màn hình dựa trên loại
 function renderProducts() {
   const socolaContainer = document.getElementById("socola-list");
   const cakeContainer = document.getElementById("cake-list");
