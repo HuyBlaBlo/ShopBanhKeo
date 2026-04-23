@@ -34,6 +34,8 @@ const productData = {
     price: 389000,
     image: "../assets/img/Socola7.jpg",
   },
+
+  // CAKE
   "cake-1": {
     name: "Set Cupcake Hoa Kem Pastel",
     price: 329000,
@@ -79,6 +81,8 @@ const productData = {
     price: 359000,
     image: "../assets/img/cake9.webp",
   },
+
+  // KEO
   "keo-1": {
     name: "Marshmallow Classic Dâu Sữa",
     price: 89000,

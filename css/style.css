@@ -187,7 +187,7 @@ section .hinh_sp:hover img {
   transform: scale(1.08);
 }
 section .khung_card {
-  background-color: #f3d3df;
+  background-color: #f5e5ef;
 }
 section .khung_card h5 {
   min-height: 80px;
