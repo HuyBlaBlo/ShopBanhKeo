@@ -1,70 +1,99 @@
-// 1. tạo ra thẻ sản phẩm dựa trên data
+//SAN PHAM
 function createProductCard(id, product) {
   return `
-        <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
-            <div class="hinh_sp card m-2 h-100 d-flex flex-column" data-id="${id}">
-                <img class="card-img-top" src="${product.image}" alt="${product.name}">
-                <div class="khung_card card-body">
-                    <div class="nd text-center mt-auto">
-                        <h5>${product.name}</h5>
-                        <p classs="text-danger fs-5">Giá: ${product.price.toLocaleString("vi-VN")} VNĐ</p>
-                    </div>
-                    <button class="dat border border-0" type="button">Đặt hàng</button>
-                    <button class="them border border-0" type="button">Thêm giỏ hàng</button>
+    <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
+        <div class="hinh_sp card m-2 h-100 d-flex flex-column shadow-sm border-0" data-id="${id}" style="cursor:pointer;">
+            <img class="card-img-top" src="${product.image}" alt="${product.name}" style="height: 200px; object-fit: cover;">
+            <div class="khung_card card-body d-flex flex-column">
+                <div class="nd text-center mt-auto mb-3">
+                    <h6 class="fw-bold text-truncate" title="${product.name}">${product.name}</h6>
+                    <p class="text-danger fw-bold fs-5 mb-0">${product.price.toLocaleString("vi-VN")}đ</p>
                 </div>
+                <button class="dat btn btn-danger w-100 mb-2 py-2 fw-bold" type="button">Mua Ngay</button>
+                <button class="them btn btn-outline-warning w-100 py-2 fw-bold text-dark" type="button">Thêm giỏ hàng</button>
             </div>
         </div>
-    `;
+    </div>
+  `;
 }
 
-// hàm vẽ sản phẩm lên màn hình dựa trên loại
+// LAY DU LIEU TU DATA.JS
 function renderProducts() {
-  const socolaContainer = document.getElementById("socola-list");
-  const cakeContainer = document.getElementById("cake-list");
-  const keoContainer = document.getElementById("keo-list");
-  const indexContainer = document.getElementById("index-products-container");
+  const containers = {
+    socola: document.getElementById("socola-list"),
+    cake: document.getElementById("cake-list"),
+    keo: document.getElementById("keo-list"),
+    hopqua: document.getElementById("hopqua-list"),
+    gioqua: document.getElementById("gioqua-list"),
+  };
 
+  const indexContainer = document.getElementById("index-products-container");
   for (let id in productData) {
     const product = productData[id];
     const cardHTML = createProductCard(id, product);
 
-    // Nếu đang ở trang products, phân loại theo id
-    if (id.startsWith("socola") && socolaContainer) {
-      socolaContainer.innerHTML += cardHTML;
-    } else if (id.startsWith("cake") && cakeContainer) {
-      cakeContainer.innerHTML += cardHTML;
-    } else if (id.startsWith("keo") && keoContainer) {
-      keoContainer.innerHTML += cardHTML;
+    let categoryPrefix = id.split("-")[0];
+
+    if (containers[categoryPrefix]) {
+      containers[categoryPrefix].innerHTML += cardHTML;
     }
 
-    // Nếu ở trang  index chỉ lấy 8 sp noi bataj
+    // CHI LAY 8 CAI
     if (indexContainer && Object.keys(productData).indexOf(id) < 8) {
       indexContainer.innerHTML += cardHTML;
     }
   }
 }
 
-//  Xử lý click
+function filterCategoryByHash() {
+  const hash = window.location.hash;
+
+  const allSections = document.querySelectorAll(".category-section");
+  const allLists = document.querySelectorAll(".category-list");
+
+  if (allSections.length === 0 || allLists.length === 0) return;
+
+  if (hash) {
+    allSections.forEach((el) => (el.style.display = "none"));
+    allLists.forEach((el) => (el.style.display = "none"));
+
+    let targetTitle = document.querySelector(hash);
+    let targetList = document.querySelector(hash + "-list");
+
+    if (targetTitle) targetTitle.style.display = "flex";
+    if (targetList) targetList.style.display = "flex";
+  } else {
+    allSections.forEach((el) => (el.style.display = "flex"));
+    allLists.forEach((el) => (el.style.display = "flex"));
+  }
+}
+
 document.addEventListener("click", function (e) {
   const card = e.target.closest(".hinh_sp");
   if (!card) return;
 
   const id = card.dataset.id;
-  const product = productData[id];
+  const product = typeof productData !== "undefined" ? productData[id] : null;
 
-  // them vaof gior hang
+  if (!product) return;
+
   if (e.target.classList.contains("them")) {
-    addToCart(id, product.name, product.price, product.image);
-  }
-  // Trường hợp bấm nút đặt hàng
-  else if (e.target.classList.contains("dat")) {
-    addToCart(id, product.name, product.price, product.image);
+    if (typeof addToCart === "function")
+      addToCart(id, product.name, product.price, product.image);
+  } else if (e.target.classList.contains("dat")) {
+    if (typeof addToCart === "function")
+      addToCart(id, product.name, product.price, product.image);
     window.location.href = "cart.html";
-  }
-  // Trường hợp bấm vào xewm chi tiết
-  else {
+  } else {
     window.location.href = `product-detail.html?id=${id}`;
   }
 });
-// luon bật
-document.addEventListener("DOMContentLoaded", renderProducts);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof productData !== "undefined") {
+    renderProducts();
+    filterCategoryByHash();
+  }
+});
+
+window.addEventListener("hashchange", filterCategoryByHash);
