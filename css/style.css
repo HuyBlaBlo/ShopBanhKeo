@@ -161,8 +161,8 @@ header .text-danger:hover {
 #title_qua {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: bolder;
-  color: #f0d5df;
-  background-color: #c2185b;
+  color: #c2185b;
+  background-color: #f3d3df;
 }
 section .card_sp {
   margin-bottom: 5px;
@@ -216,7 +216,7 @@ section .khung_card .dat:hover {
   color: yellow;
   background: linear-gradient(to right, #cb0530, #df4b7a, #cb0530);
 }
-/* ================= ABOUT PAGE ONLY ================= */
+/* ================= ABOUT ================= */
 .about-page {
   background: linear-gradient(135deg, #fff0f5, #ffe4ec);
 }

@@ -10,7 +10,7 @@ function createProductCard(id, product) {
                     <p class="text-danger fw-bold fs-5 mb-0">${product.price.toLocaleString("vi-VN")}đ</p>
                 </div>
                 <button class="dat btn btn-danger w-100 mb-2 py-2 fw-bold" type="button">Mua Ngay</button>
-                <button class="them btn btn-outline-warning w-100 py-2 fw-bold text-dark" type="button">Thêm giỏ hàng</button>
+                <button class="them btn w-100 py-2 fw-bold text-dark" type="button">Thêm giỏ hàng</button>
             </div>
         </div>
     </div>
