@@ -2,7 +2,8 @@ const productData = {
   //SOCOLA
   "socola-1": {
     name: "Socola Đen Nguyên Chất 85% Cacao",
-    price: 189000,
+    price: 150000, // giá bán hiện tại
+    oldPrice: 189000, // giá cũ
     image: "../assets/img/socola/Socola1.jpg",
   },
   "socola-2": {
@@ -12,7 +13,8 @@ const productData = {
   },
   "socola-3": {
     name: "Socola Truffle Thượng Hạng",
-    price: 299000,
+    price: 250000,
+    oldPrice: 299000,
     image: "../assets/img/socola/Socola3.jpg",
   },
   "socola-4": {
@@ -49,7 +51,8 @@ const productData = {
   },
   "cake-3": {
     name: "Cupcake Trái Cây Tươi Mix",
-    price: 279000,
+    price: 269000, // giá bán hiện tại
+    oldPrice: 279000, // giá cũ
     image: "../assets/img/cake/cake3.webp",
   },
   "cake-4": {
@@ -59,7 +62,8 @@ const productData = {
   },
   "cake-5": {
     name: "Cupcake Matcha Nhật Bản",
-    price: 289000,
+    price: 269000, // giá bán hiện tại
+    oldPrice: 289000, // giá cũ
     image: "../assets/img/cake/cake5.webp",
   },
   "cake-6": {
@@ -69,7 +73,8 @@ const productData = {
   },
   "cake-7": {
     name: "Bánh Kem Bắp Ngọt Dịu",
-    price: 349000,
+    price: 290000, // giá bán hiện tại
+    oldPrice: 349000, // giá cũ
     image: "../assets/img/cake/cake7.webp",
   },
   "cake-8": {
@@ -86,7 +91,8 @@ const productData = {
   //KEO
   "keo-1": {
     name: "Marshmallow Classic Dâu Sữa",
-    price: 89000,
+    price: 75000,
+    oldPrice: 89000,
     image: "../assets/img/keo/keo1.webp",
   },
   "keo-2": {
@@ -101,7 +107,8 @@ const productData = {
   },
   "keo-4": {
     name: "Marshmallow Pastel Sweet Cube",
-    price: 109000,
+    price: 99000,
+    oldPrice: 109000,
     image: "../assets/img/keo/keo4.webp",
   },
   "keo-5": {
@@ -111,7 +118,8 @@ const productData = {
   },
   "keo-6": {
     name: "Kẹo Dẻo Trái Cây Sugar Jelly",
-    price: 99000,
+    price: 79000, // giá bán hiện tại
+    oldPrice: 99000, // giá cũ
     image: "../assets/img/keo/keo6.webp",
   },
   "keo-7": {
@@ -148,7 +156,8 @@ const productData = {
   },
   "hopqua-6": {
     name: "Premium Gold Box",
-    price: 320000,
+    price: 290000,
+    oldPrice: 320000,
     image: "../assets/img/quascl/hopscl6.webp",
   },
 
@@ -170,12 +179,14 @@ const productData = {
   },
   "gioqua-4": {
     name: "Set Pure White",
-    price: 380000,
+    price: 340000,
+    oldPrice: 380000,
     image: "../assets/img/quabk/quabk4.webp",
   },
   "gioqua-5": {
     name: "Hộp Kẹo Candy Twist",
-    price: 80000,
+    price: 65000,
+    oldPrice: 80000,
     image: "../assets/img/quabk/quabk5.jpg",
   },
 };

@@ -1,16 +1,38 @@
-//SAN PHAM
+//SAN PHAM VA SALE
 function createProductCard(id, product) {
+  let priceHTML = `
+    <div class="mb-2">
+      <p class="text-danger fw-bold fs-5 mb-0">${product.price.toLocaleString("vi-VN")}đ</p>
+    </div>
+  `;
+  let badgeHTML = "";
+
+  if (product.oldPrice && product.oldPrice > product.price) {
+    let discountPercent = Math.round(
+      (1 - product.price / product.oldPrice) * 100,
+    );
+
+    priceHTML = `
+      <div class="mb-2">
+        <p class="text-muted text-decoration-line-through mb-0" style="font-size: 0.85rem;">${product.oldPrice.toLocaleString("vi-VN")}đ</p>
+        <p class="text-danger fw-bold fs-5 mb-0">${product.price.toLocaleString("vi-VN")}đ</p>
+      </div>
+    `;
+    badgeHTML = `<span class="badge bg-danger position-absolute top-0 start-0 m-2 shadow-sm">-${discountPercent}%</span>`;
+  }
+
   return `
     <div class="card_sp col-6 col-md-4 col-lg-3 mb-5">
-        <div class="hinh_sp card m-2 h-100 d-flex flex-column shadow-sm border-0" data-id="${id}" style="cursor:pointer;">
-            <img class="card-img-top" src="${product.image}" alt="${product.name}" style="height: 200px; object-fit: cover;">
+        <div class="hinh_sp card m-2 h-100 d-flex flex-column shadow-sm border-0 position-relative" data-id="${id}" style="cursor:pointer;">
+            ${badgeHTML}
+            <img class="card-img-top p-2" src="${product.image}" alt="${product.name}" style="height: 200px; object-fit: cover; border-radius: 12px;">
             <div class="khung_card card-body d-flex flex-column">
                 <div class="nd text-center mt-auto mb-3">
                     <h6 class="fw-bold text-truncate" title="${product.name}">${product.name}</h6>
-                    <p class="text-danger fw-bold fs-5 mb-0">${product.price.toLocaleString("vi-VN")}đ</p>
+                    ${priceHTML}
                 </div>
-                <button class="dat btn btn-danger w-100 mb-2 py-2 fw-bold" type="button">Mua Ngay</button>
-                <button class="them btn w-100 py-2 fw-bold text-dark" type="button">Thêm giỏ hàng</button>
+                <button class="dat btn btn-danger w-100 mb-2 py-2 fw-bold text-uppercase" style="font-size: 0.9rem;" type="button">Mua Ngay</button>
+                <button class="them btn btn-outline-warning w-100 py-2 fw-bold text-dark text-uppercase" style="font-size: 0.9rem;" type="button">Thêm giỏ hàng</button>
             </div>
         </div>
     </div>
@@ -27,18 +49,26 @@ function renderProducts() {
     gioqua: document.getElementById("gioqua-list"),
   };
 
+  const khuyenMaiContainer = document.getElementById("khuyenmai-list");
   const indexContainer = document.getElementById("index-products-container");
+
   for (let id in productData) {
     const product = productData[id];
     const cardHTML = createProductCard(id, product);
 
     let categoryPrefix = id.split("-")[0];
 
+    // Đưa vào từng loại tương ứng
     if (containers[categoryPrefix]) {
       containers[categoryPrefix].innerHTML += cardHTML;
     }
 
-    // CHI LAY 8 CAI
+    // Nếu có giá cũ lớn hơn giá mới thì thêm vào mục khuyeens  mãi
+    if (khuyenMaiContainer && product.oldPrice > product.price) {
+      khuyenMaiContainer.innerHTML += cardHTML;
+    }
+
+    // Load 8 sản phẩm ra trang chủ
     if (indexContainer && Object.keys(productData).indexOf(id) < 8) {
       indexContainer.innerHTML += cardHTML;
     }
@@ -63,8 +93,19 @@ function filterCategoryByHash() {
     if (targetTitle) targetTitle.style.display = "flex";
     if (targetList) targetList.style.display = "flex";
   } else {
-    allSections.forEach((el) => (el.style.display = "flex"));
-    allLists.forEach((el) => (el.style.display = "flex"));
+    // truong hop bam "san pham" o footer
+    allSections.forEach((el) => (el.style.display = "none"));
+    allLists.forEach((el) => (el.style.display = "none"));
+    // hien thi tat ca tru sale
+    const danhMucCoBan = ["#socola", "#cake", "#keo"];
+
+    danhMucCoBan.forEach((id) => {
+      let title = document.querySelector(id);
+      let list = document.querySelector(id + "-list");
+
+      if (title) title.style.display = "flex";
+      if (list) list.style.display = "flex";
+    });
   }
 }
 
