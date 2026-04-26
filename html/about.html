@@ -492,32 +492,49 @@
     </div>
     <!-- chăm sóc khách hàng -->
     <div class="modal fade" id="rickRollModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div
-          class="modal-content bg-dark border-danger"
-          style="border-width: 3px"
-        >
-          <div class="modal-header border-0">
-            <h5 class="modal-title text-warning fw-bold">
-              TỔNG ĐÀI HỖ TRỢ KHÁCH HÀNG
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-danger" style="border-width: 3px">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-danger">
+              📢 THÔNG BÁO TỪ TỔNG ĐÀI
             </h5>
             <button
               type="button"
-              class="btn-close btn-close-white"
+              class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body p-0 text-center">
-            <div class="ratio ratio-16x9">
-              <video id="rickroll-local-video" controls loop autoplay>
-                <source src="../assets/videos/rickroll.mp4" type="video/mp4" />
-                Trình duyệt của bạn không hỗ trợ xem video này.
-              </video>
+          <div class="modal-body text-center p-4">
+            <img
+              src="../assets/img/customerservice.png"
+              class="img-fluid rounded shadow-sm mb-3"
+              alt="Please wait"
+            />
+
+            <h5 class="fw-bold text-secondary">Hệ thống đang bận...</h5>
+            <p class="text-muted small">
+              Vui lòng chờ trong khi chuyên viên của chúng tôi đang đi mua bánh
+              kẹo. Xin cảm ơn!
+            </p>
+
+            <div class="progress mt-3" style="height: 10px">
+              <div
+                class="progress-bar progress-bar-striped progress-bar-animated bg-info"
+                role="progressbar"
+                style="width: 99%"
+              ></div>
             </div>
-            <h4 class="text-white mt-3 mb-4">
-              Đang kết nối với chuyên viên Bla Blo...
-            </h4>
+            <small class="text-muted mt-2 d-block">Đang tải... 99%</small>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger text-white w-100"
+              data-bs-dismiss="modal"
+            >
+              Đã hiểu
+            </button>
           </div>
         </div>
       </div>
