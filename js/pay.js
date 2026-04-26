@@ -261,3 +261,87 @@ function initAddressSelects() {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Danh sách mã giảm giá giả lập
+    const validVouchers = {
+        "SWEET10": { type: "percent", value: 10 },      // Giảm 10%
+        "FREESHIP": { type: "fixed", value: 35000 },    // Giảm 35.000đ
+        "GIAM50K": { type: "fixed", value: 50000 }      // Giảm 50.000đ
+    };
+
+    // Hàm tiện ích: Ép chuỗi "35.000đ" thành số 35000
+    function parseCurrency(str) {
+        return parseInt(str.replace(/[^0-9]/g, "")) || 0;
+    }
+
+    // Hàm tiện ích: Format số 35000 thành "35.000đ"
+    function formatCurrency(num) {
+        return num.toLocaleString("vi-VN") + "đ";
+    }
+
+    // 2. Bắt sự kiện khi bấm nút "Áp dụng"
+    const btnApplyVoucher = document.getElementById("btn-apply-voucher");
+    if (btnApplyVoucher) {
+        btnApplyVoucher.addEventListener("click", function () {
+            const inputCode = document.getElementById("voucher-input").value.trim().toUpperCase();
+            
+            if (!inputCode) {
+                alert("Vui lòng nhập mã giảm giá!");
+                return;
+            }
+
+            if (validVouchers.hasOwnProperty(inputCode)) {
+                const voucher = validVouchers[inputCode];
+                applyDiscount(voucher, inputCode);
+            } else {
+                alert("Mã giảm giá không hợp lệ hoặc đã hết hạn!");
+            }
+        });
+    }
+
+    // 3. Logic tính toán tiền
+    function applyDiscount(voucher, codeName) {
+        const subtotalEl = document.getElementById("checkout-subtotal");
+        const shippingEl = document.getElementById("checkout-shipping");
+        const totalEl = document.getElementById("checkout-total");
+        const bottomTotalEl = document.getElementById("bottom-total");
+        
+        const discountRow = document.getElementById("discount-row");
+        const discountValEl = document.getElementById("checkout-discount");
+
+        // Lấy tiền hàng và tiền ship hiện tại (Mặc định đang là 0đ và 35.000đ trong HTML của bạn)
+        let subtotal = parseCurrency(subtotalEl.innerText);
+        let shipping = parseCurrency(shippingEl.innerText);
+        let discountAmount = 0;
+
+        // Tính tiền được giảm
+        if (voucher.type === "percent") {
+            discountAmount = (subtotal * voucher.value) / 100;
+        } else if (voucher.type === "fixed") {
+            discountAmount = voucher.value;
+        }
+
+        // Không cho phép giảm lố tổng tiền
+        if (discountAmount > (subtotal + shipping)) {
+            discountAmount = subtotal + shipping;
+        }
+
+        let newTotal = subtotal + shipping - discountAmount;
+        if (newTotal < 0) newTotal = 0;
+
+        // Cập nhật lên giao diện
+        discountValEl.innerText = "-" + formatCurrency(discountAmount);
+        discountRow.classList.remove("d-none"); // Hiện dòng màu xanh lên
+        
+        totalEl.innerText = formatCurrency(newTotal);
+        bottomTotalEl.innerText = formatCurrency(newTotal);
+
+        alert(`Áp dụng mã ${codeName} thành công! Bạn được giảm ${formatCurrency(discountAmount)}`);
+        
+        // Đóng Modal an toàn bằng Bootstrap
+        const modalElement = document.getElementById('voucherModal');
+        const modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+        modalInstance.hide();
+    }
+});

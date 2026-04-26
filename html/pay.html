@@ -79,11 +79,17 @@
         <span id="checkout-subtotal" class="fw-medium">0đ</span>
       </div>
 
-      <div
-        class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom"
-      >
+      <div class="d-flex justify-content-between align-items-center mb-2">
         <span class="text-muted">Phí vận chuyển</span>
         <span id="checkout-shipping" class="fw-medium">35.000đ</span>
+      </div>
+
+      <div
+        id="discount-row"
+        class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom text-success d-none"
+      >
+        <span>Mã giảm giá</span>
+        <span id="checkout-discount" class="fw-medium">-0đ</span>
       </div>
 
       <div
@@ -107,7 +113,7 @@
         MUA NGAY
       </button>
     </div>
-
+    
     <!-- ================= MODAL ================= -->
     <!-- MODAL ĐỊA CHỈ -->
     <div class="modal fade" id="addressModal">
@@ -186,18 +192,18 @@
       <div class="modal-dialog modal-dialog-bottom">
         <div class="modal-content p-3">
           <h5>Ưu đãi</h5>
-          <input class="form-control mt-2" placeholder="Nhập mã ưu đãi" />
+          <input id="voucher-input" class="form-control mt-2" placeholder="Nhập mã ưu đãi" />
 
           <div class="d-flex justify-content-end mt-3">
             <button class="btn btn-secondary me-2" data-bs-dismiss="modal">
               Đóng
             </button>
-            <button class="btn btn-main">Áp dụng</button>
+            <button id="btn-apply-voucher" class="btn btn-main">Áp dụng</button>
           </div>
         </div>
       </div>
     </div>
-
+    
     <!--MODAL THANH TOAN CHUYEN KHOAN-->
     <div class="modal fade" id="qrModal">
       <div class="modal-dialog modal-dialog-centered">
