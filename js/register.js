@@ -14,9 +14,30 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault(); // chặn reload trang khi submit
 
     if (kiemTraForm()) {
-      alert("Đăng ký thành công!");
+    // Lưu tài khoản
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    
+    let email = document.getElementById("email").value.trim();
+
+    // kiểm tra trùng
+    let exist = users.find(u => u.email === email);
+
+    if (exist) {
+      alert("Email đã tồn tại!");
+      return;
     }
-  });
+
+    users.push({
+      username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
+      email: email
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Đăng ký thành công!");
+    }
+    });
 
   document.getElementById("username").addEventListener("blur", kiemTraUsername);
   document.getElementById("password").addEventListener("blur", kiemTraPassword);
@@ -159,7 +180,7 @@ function kiemTraSDT() {
 //KIEM TRA EMAIL
 function kiemTraEmail() {
   let email = document.getElementById("email").value.trim();
-  let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let regex = /^[A-Za-z0-9]+@[A-Za-z]{4,}\.[A-Za-z]{2,}$/;
 
   document.getElementById("errEmail").innerHTML =
     regex.test(email)

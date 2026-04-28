@@ -18,7 +18,7 @@ function kiemTraSoDT() {
 
 function kiemTraEmail() {
   let email = document.getElementById("txtEmail").value.trim();
-  let mauEmail = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+  let mauEmail = /^[A-Za-z0-9]+@[A-Za-z]{4,}\.[A-Za-z]{2,}$/;
   document.getElementById("errEmail").innerHTML = mauEmail.test(email)
     ? "<span class='text-success'>OK</span>"
     : "<span class='text-danger'>Email phải đúng định dạng và có đuôi @gmail.com</span>";
